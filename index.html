@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Automático de Tesouros (T20)</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #1e1e24; color: #fff; margin: 0; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; background: #2b2b36; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border-top: 5px solid #d32f2f; }
+        h1 { color: #f44336; text-align: center; margin-top: 0; }
+        select, button { width: 100%; padding: 12px; font-size: 16px; border-radius: 6px; border: none; margin-bottom: 15px; }
+        select { background-color: #3f3f4e; color: white; }
+        button { background-color: #d32f2f; color: white; font-weight: bold; cursor: pointer; }
+        .card-resultado { background: #3f3f4e; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #f44336; }
+        .rolagem { color: #8bc34a; font-weight: bold; }
+        .fonte { color: #aaa; font-size: 12px; font-style: italic; display: block; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Gerador de Tesouro</h1>
+    <select id="nd-select">
+        <option value="1/4">ND 1/4</option>
+        <option value="1/2">ND 1/2</option>
+        <option value="1">ND 1</option>
+        <option value="2">ND 2</option>
+        <option value="3">ND 3</option>
+        <option value="4">ND 4</option>
+        <option value="5">ND 5</option>
+        <option value="6">ND 6</option>
+        <option value="7">ND 7</option>
+        <option value="8">ND 8</option>
+        <option value="9">ND 9</option>
+        <option value="10">ND 10</option>
+        <option value="11">ND 11</option>
+        <option value="12">ND 12</option>
+        <option value="13">ND 13</option>
+        <option value="14">ND 14</option>
+        <option value="15">ND 15</option>
+        <option value="16">ND 16</option>
+        <option value="17">ND 17</option>
+        <option value="18">ND 18</option>
+        <option value="19">ND 19</option>
+        <option value="20">ND 20</option>
+    </select>
+    <button onclick="gerarTesouro()">Rolar Tesouro</button>
+    <div id="historico"></div>
+
+    <div style="margin-top: 30px; text-align: center; font-size: 12px; color: #888; border-top: 1px solid #444; padding-top: 15px; line-height: 1.6;">
+        Desenvolvido com base na planilha oficial de Geração de Tesouros 2.0.<br>
+        Planilha original por <strong>Guilherme Dei Svaldi</strong> (Riquezas por <strong>Rafael Dei Svaldi</strong>).<br>
+        <em>Tormenta é uma criação de Leonel Caldela, Marcelo Cassaro, Guilherme Dei Svaldi, Rafael Dei Svaldi e J. M. Trevisan (Jambô Editora).</em>
+    </div>
+    
+</div>
+
+<script>
+let bd = {};
+    fetch('dados.json').then(res => res.json()).then(data => bd = data);
+
+    const rolarD100 = () => Math.floor(Math.random() * 100) + 1;
+    const rolarD6 = () => Math.floor(Math.random() * 6) + 1;
+
+    function checa(chance, valor) {
+        if (!chance || chance === "—") return false;
+        let p = chance.toString().split('-');
+        return p.length === 1 ? valor == p[0] : (valor >= p[0] && valor <= p[1]);
+    }
+
+    function buscarItem(tabela, rolagem) {
+        if (!tabela) return { nome: "Erro" };
+        for (let i of tabela) if (checa(i.chance, rolagem)) return i;
+        return { nome: "Nenhum" };
+    }
+
+function resolverFinal(tipoBase) {
+        if (!tipoBase || tipoBase === "—") return "Nenhum";
+        let text = tipoBase.toLowerCase();
+        let r = rolarD100();
+
+        if (text.includes("diverso")) return `Item Diverso: <strong>${buscarItem(bd.itens_diversos, r).nome}</strong>`;
+        if (text.includes("poção") || text.includes("poções")) return `Poção: <strong>${buscarItem(bd.pocoes, r).nome}</strong>`;
+        if (text.includes("riqueza")) return `Riqueza: <strong>${buscarItem(bd.riquezas, r).nome}</strong>`;
+        
+        if (text.includes("equipamento")) {
+            let d6 = rolarD6();
+            let sub = d6 <= 3 ? "Armas" : (d6 <= 5 ? "Armaduras" : "Esotericos");
+            return `Equipamento (${sub}): <strong>${buscarItem(bd.equipamentos[sub], r).nome}</strong>`;
+        }
+        
+        if (text.includes("superior") || text.includes("mágico")) {
+            let idUnico = Math.random().toString(36).substr(2, 9);
+            let botoesHTML = `<div style="margin-top: 10px; padding-left: 10px; border-left: 2px solid #555;">`;
+            
+            let isMagico = text.includes("mágico");
+            let d6Cat = rolarD6();
+            let categoria = "";
+            let numRols = 1;
+
+            // Passo 1: Definir Categoria por d6
+            if (isMagico) {
+                if (d6Cat <= 2) categoria = "Armas";
+                else if (d6Cat === 3) categoria = "Armaduras";
+                else if (d6Cat === 4) categoria = "Esotericos";
+                else categoria = "Acessorios";
+                
+                // Passo 2 do Mágico: Quantidade de Encantos
+                if (text.includes("menor")) numRols = 1;
+                else if (text.includes("médio") || text.includes("medio")) numRols = 2;
+                else if (text.includes("maior")) numRols = 3;
+            } else { // Superior
+                if (d6Cat <= 3) categoria = "Armas";
+                else if (d6Cat <= 5) categoria = "Armaduras";
+                else categoria = "Esotericos";
+                
+                // Superior: Quantidade pela string (ex: "3 melhorias")
+                let match = text.match(/\d+/);
+                numRols = match ? parseInt(match[0]) : 1;
+            }
+
+            let catDisplay = categoria === "Acessorios" ? "Acessório" : (categoria === "Esotericos" ? "Esotérico" : categoria.slice(0, -1));
+            botoesHTML += `<div style="margin-bottom: 8px; color: #aaa; font-size: 13px;">Categoria sorteada (1d6 = ${d6Cat}): <strong>${catDisplay}</strong></div>`;
+
+            // Botões de Acessório (não possui item base)
+            if (categoria === "Acessorios") {
+                let nivel = "Menor";
+                if (text.includes("médio") || text.includes("medio")) nivel = "Medio";
+                if (text.includes("maior")) nivel = "Maior";
+                
+                botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                    <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('acess_${idUnico}', 'acessorio_${nivel}')">🎲 Rolar Acessório</button>
+                    <div id="acess_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                </div>`;
+            } else {
+                // Botões de Base Mundana + Encantos/Melhorias
+                botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                    <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #555; flex-shrink: 0;" onclick="rolarSubItem('base_${idUnico}', 'base_${categoria}')">🎲 Rolar Base</button>
+                    <div id="base_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                </div>`;
+
+                let tabelaExtra = isMagico ? "magicos" : "superiores";
+                for (let i = 1; i <= numRols; i++) {
+                    botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                        <button style="width: 120px; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('extra_${i}_${idUnico}', '${tabelaExtra}_${categoria}')">🎲 ${isMagico ? 'Encanto' : 'Melhoria'} ${i}</button>
+                        <div id="extra_${i}_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                    </div>`;
+                }
+            }
+            botoesHTML += `</div>`;
+            return `<strong style="color: #ff9800;">${tipoBase}</strong> ${botoesHTML}`;
+        }
+        return `<strong>${tipoBase}</strong>`; 
+    } 
+
+    window.rolarSubItem = function(idAlvo, tipo) {
+        let r = rolarD100();
+        let alvo = document.getElementById(idAlvo);
+        
+        const formataItem = (obj) => {
+            let txt = `<strong>${obj.nome}</strong>`;
+            if (obj.livro && obj.livro !== "nan") {
+                let pag = String(obj.pagina).replace('.0', '');
+                txt += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${obj.livro} p.${pag}]</span>`;
+            }
+            return txt;
+        };
+
+        if (tipo === 'equipamento') {
+            let d6 = rolarD6();
+            let sub = d6 <= 3 ? "Armas" : (d6 <= 5 ? "Armaduras" : "Esotericos");
+            let item = buscarItem(bd.equipamentos[sub], r);
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(${sub} | 1d6: ${d6} | d%: ${r})</span>`;
+            
+        } else if (tipo.startsWith('base_')) {
+            let sub = tipo.split('_')[1];
+            let item = buscarItem(bd.equipamentos[sub], r);
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+            
+        } else if (tipo.startsWith('acessorio_')) {
+            let nivel = tipo.split('_')[1];
+            let item = buscarItem(bd.acessorios[nivel], r);
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+            
+        } else if (tipo.startsWith('superiores_')) {
+            let sub = tipo.split('_')[1];
+            let item = buscarItem(bd.superiores[sub], r);
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+            
+        } else if (tipo.startsWith('magicos_')) {
+            let sub = tipo.split('_')[1];
+            let item = buscarItem(bd.magicos[sub], r);
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+        }
+    }
+
+    window.copiarCard = function(botao, nd, txtDinh) {
+        // Puxa o card atual e a área de itens
+        let card = botao.closest('.card-resultado');
+        let divItens = card.querySelector('.bloco-itens');
+        
+        // Clona a área de itens para não alterar a tela do site
+        let clone = divItens.cloneNode(true);
+        
+        // Remove os botões de rolar do texto que vai ser copiado
+        let botoes = clone.querySelectorAll('button');
+        botoes.forEach(b => b.remove());
+        
+        // Extrai o texto limpo, apagando o "[d% Itens: XX] ->"
+        let textoItens = clone.innerText.replace(/\[d% Itens: \d+\] -> /, '').trim();
+        textoItens = textoItens.replace(/^\s*[\r\n]/gm, ''); // Remove quebras de linha vazias
+
+        let textoFinal = `💰 Tesouro (ND ${nd})\nDinheiro: ${txtDinh}\nItens:\n${textoItens}`;
+        
+        navigator.clipboard.writeText(textoFinal);
+        botao.innerText = 'Copiado!';
+        setTimeout(() => botao.innerText = 'Copiar', 2000);
+    }
+
+    function gerarTesouro() {
+        if (!bd.tesouro_nd) return;
+        const nd = document.getElementById("nd-select").value;
+        const dDinh = rolarD100(), dItens = rolarD100();
+        const tab = bd.tesouro_nd.filter(i => i.nd == nd);
+        
+        let txtD = "Nenhum", txtI = "Nenhum";
+        for (let l of tab) {
+            if (checa(l.chance_dinheiro, dDinh)) txtD = l.dinheiro;
+            if (checa(l.chance_itens, dItens)) txtI = l.itens;
+        }
+
+        let itemResolvido = txtI !== "—" ? resolverFinal(txtI) : "Nenhum";
+
+        const res = document.createElement("div");
+        res.className = "card-resultado";
+        res.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span>ND: <strong>${nd}</strong></span>
+                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555;" onclick="copiarCard(this, '${nd}', '${txtD}')">Copiar</button>
+            </div>
+            <hr style="border-color: #444; margin: 10px 0;">
+            <div><span class="rolagem">[d% Dinh: ${dDinh}]</span> -> ${txtD}</div>
+            <div class="bloco-itens" style="margin-top:8px;"><span class="rolagem">[d% Itens: ${dItens}]</span> -> ${itemResolvido}</div>`;
+        document.getElementById("historico").prepend(res);
+    }
+</script>
+</body>
+</html>
