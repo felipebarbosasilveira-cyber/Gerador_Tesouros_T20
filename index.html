@@ -234,9 +234,6 @@ let bd = {};
                 if (itemEsp.livro && itemEsp.livro !== "nan") {
                     htmlFinal += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${itemEsp.livro} p.${String(itemEsp.pagina).replace('.0', '')}]</span>`;
                 }
-                
-                // Lembra o Mestre da regra restritiva exibida na sua imagem
-                htmlFinal += `<br><span style="font-size:11px; color:#ff9800; display:block; margin-top:4px;">*Nota: Só vale se o tesouro for Médio ou Maior. Se for Menor (apenas 1 encanto), ignore este item e clique para rerrolar o encanto!</span>`;
             }
             
             alvo.innerHTML = htmlFinal;
@@ -431,5 +428,35 @@ function rolarEspacoRiqueza() {
         };
     }
 </script>
+
+<!-- PAINEL FLUTUANTE DE AJUDA DAS REGRAS E ASTERISCOS -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 10px;">
+
+    <!-- ABA DE SUPERIORES (MELHORIAS) -->
+    <details style="background: #2b2b36; border: 1px solid #555; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); width: 310px;">
+        <summary style="cursor: pointer; padding: 10px 14px; font-weight: bold; color: #4db8ff; font-size: 14px; outline: none; display: flex; align-items: center; justify-content: space-between;">
+            <span>ℹ️ Regras: Superiores (Melhorias)</span>
+        </summary>
+        <div style="padding: 10px 14px; border-top: 1px solid #444; font-size: 12px; color: #ccc; line-height: 1.5;">
+            <p style="margin: 0 0 8px 0; color: #aaa; font-style: italic;">Se rolar uma melhoria que não se aplique ao item em questão (ex: melhoria exclusiva de escudos para armadura), role novamente.</p>
+            <p style="margin: 0 0 6px 0;"><strong>⚔️ Armas & Armaduras (*):</strong><br> *Conta como duas melhorias e inclui a melhoria de pré-requisito. Se o item só possuir uma, role novamente.</p>
+            <p style="margin: 0;"><strong>🛡️ Armaduras (**):</strong><br> **Role 1d6 para definir o material:<br> 1) aço-rubi, 2) adamante, 3) gelo eterno, 4) madeira Tollon, 5) matéria vermelha, 6) mitral.</p>
+        </div>
+    </details>
+
+    <!-- ABA DE MÁGICOS -->
+    <details style="background: #2b2b36; border: 1px solid #555; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); width: 310px;">
+        <summary style="cursor: pointer; padding: 10px 14px; font-weight: bold; color: #ff9800; font-size: 14px; outline: none; display: flex; align-items: center; justify-content: space-between;">
+            <span>ℹ️ Regras: Mágicos (Encantos)</span>
+        </summary>
+        <div style="padding: 10px 14px; border-top: 1px solid #444; font-size: 12px; color: #ccc; line-height: 1.5;">
+            <p style="margin: 0 0 8px 0;"><strong>⚔️ Armas (*):</strong><br> *Conta como dois encantos e inclui o encanto de pré-requisito. Se o item só possuir um, role novamente.</p>
+            <p style="margin: 0 0 8px 0;"><strong>🛡️ Armaduras & Escudos:</strong><br> *Apenas armaduras. Para escudos, role novamente.<br>**Apenas escudos. Para armaduras, role novamente.<br>***Conta como dois encantos e inclui o encanto de pré-requisito. Se o item só possuir um, role novamente.</p>
+            <p style="margin: 0;"><strong>✨ Esotéricos (*):</strong><br> *Apenas para itens com pelo menos dois encantos.</p>
+        </div>
+    </details>
+
+</div>
+
 </body>
 </html>
