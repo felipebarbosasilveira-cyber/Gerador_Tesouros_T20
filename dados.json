@@ -641,665 +641,995 @@
     "itens_diversos": [
         {
             "chance": "01-01",
-            "nome": "Ácido"
+            "nome": "Ácido",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "02-02",
-            "nome": "Água benta"
+            "nome": "Água benta",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "03-03",
-            "nome": "Alaúde élfico"
+            "nome": "Alaúde élfico",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "04-04",
-            "nome": "Algemas"
+            "nome": "Algemas",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "05-05",
-            "nome": "Baga-de-fogo"
+            "nome": "Baga-de-fogo",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "06-08",
-            "nome": "Bálsamo restaurador"
+            "nome": "Bálsamo restaurador",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "09-09",
-            "nome": "Bandana"
+            "nome": "Bandana",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "10-10",
-            "nome": "Bandoleira de poções"
+            "nome": "Bandoleira de poções",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "11-11",
-            "nome": "Bomba"
+            "nome": "Bomba",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "12-12",
-            "nome": "Botas reforçadas"
+            "nome": "Botas reforçadas",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "13-13",
-            "nome": "Camisa bufante"
+            "nome": "Camisa bufante",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "14-14",
-            "nome": "Capa esvoaçante"
+            "nome": "Capa esvoaçante",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "15-15",
-            "nome": "Capa pesada"
+            "nome": "Capa pesada",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "16-16",
-            "nome": "Casaco longo"
+            "nome": "Casaco longo",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "17-17",
-            "nome": "Chapéu arcano"
+            "nome": "Chapéu arcano",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "18-18",
-            "nome": "Coleção de livros"
+            "nome": "Coleção de livros",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "19-19",
-            "nome": "Cosmético"
+            "nome": "Cosmético",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "20-20",
-            "nome": "Dente-de-dragão"
+            "nome": "Dente-de-dragão",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "21-21",
-            "nome": "Enfeite de elmo"
+            "nome": "Enfeite de elmo",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "22-22",
-            "nome": "Elixir do amor"
+            "nome": "Elixir do amor",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "23-23",
-            "nome": "Equipamento de viagem"
+            "nome": "Equipamento de viagem",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "24-26",
-            "nome": "Essência de mana"
+            "nome": "Essência de mana",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "27-27",
-            "nome": "Estojo de disfarces"
+            "nome": "Estojo de disfarces",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "28-28",
-            "nome": "Farrapos de ermitão"
+            "nome": "Farrapos de ermitão",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "29-29",
-            "nome": "Flauta mística"
+            "nome": "Flauta mística",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "30-30",
-            "nome": "Fogo alquímico"
+            "nome": "Fogo alquímico",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "31-31",
-            "nome": "Gorro de ervas"
+            "nome": "Gorro de ervas",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "32-32",
-            "nome": "Líquen lilás"
+            "nome": "Líquen lilás",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "33-33",
-            "nome": "Luneta"
+            "nome": "Luneta",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "34-34",
-            "nome": "Luva de pelica"
+            "nome": "Luva de pelica",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "35-35",
-            "nome": "Maleta de medicamentos"
+            "nome": "Maleta de medicamentos",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "36-36",
-            "nome": "Manopla"
+            "nome": "Manopla",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "37-37",
-            "nome": "Manto eclesiástico"
+            "nome": "Manto eclesiástico",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "38-38",
-            "nome": "Mochila de aventureiro"
+            "nome": "Mochila de aventureiro",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "39-39",
-            "nome": "Musgo púrpura"
+            "nome": "Musgo púrpura",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "40-40",
-            "nome": "Organizador de pergaminhos"
+            "nome": "Organizador de pergaminhos",
+            "livro": "Tormenta20",
+            "pagina": "155"
         },
         {
             "chance": "41-41",
-            "nome": "Ossos de monstro"
+            "nome": "Ossos de monstro",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "42-42",
-            "nome": "Pó de cristal"
+            "nome": "Pó de cristal",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "43-43",
-            "nome": "Pó de giz"
+            "nome": "Pó de giz",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "44-44",
-            "nome": "Pó do desaparecimento"
+            "nome": "Pó do desaparecimento",
+            "livro": "Tormenta20",
+            "pagina": "160"
         },
         {
             "chance": "45-45",
-            "nome": "Robe místico"
+            "nome": "Robe místico",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "46-46",
-            "nome": "Saco de sal"
+            "nome": "Saco de sal",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "47-47",
-            "nome": "Sapatos de camurça"
+            "nome": "Sapatos de camurça",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "48-48",
-            "nome": "Seixo de âmbar"
+            "nome": "Seixo de âmbar",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "49-49",
-            "nome": "Sela"
+            "nome": "Sela",
+            "livro": "Tormenta20",
+            "pagina": "158"
         },
         {
             "chance": "50-50",
-            "nome": "Tabardo"
+            "nome": "Tabardo",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "51-51",
-            "nome": "Traje da corte"
+            "nome": "Traje da corte",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "52-52",
-            "nome": "Terra de cemitério"
+            "nome": "Terra de cemitério",
+            "livro": "Tormenta20",
+            "pagina": "161"
         },
         {
             "chance": "53-53",
-            "nome": "Veste de seda"
+            "nome": "Veste de seda",
+            "livro": "Tormenta20",
+            "pagina": "159"
         },
         {
             "chance": "54-54",
-            "nome": "Corda de teia"
+            "nome": "Corda de teia",
+            "livro": "Ameaças de Arton",
+            "pagina": "396"
         },
         {
             "chance": "55-55",
-            "nome": "Dente de wisphago"
+            "nome": "Dente de wisphago",
+            "livro": "Ameaças de Arton",
+            "pagina": "396"
         },
         {
             "chance": "56-56",
-            "nome": "Bomba de fumaça"
+            "nome": "Bomba de fumaça",
+            "livro": "Ameaças de Arton",
+            "pagina": "396"
         },
         {
             "chance": "57-57",
-            "nome": "Elixir quimérico"
+            "nome": "Elixir quimérico",
+            "livro": "Ameaças de Arton",
+            "pagina": "396"
         },
         {
             "chance": "58-58",
-            "nome": "Éter elemental"
+            "nome": "Éter elemental",
+            "livro": "Ameaças de Arton",
+            "pagina": "396"
         },
         {
             "chance": "59-59",
-            "nome": "Óleo de besouro"
+            "nome": "Óleo de besouro",
+            "livro": "Ameaças de Arton",
+            "pagina": "397"
         },
         {
             "chance": "60-60",
-            "nome": "Água benta concentrada"
+            "nome": "Água benta concentrada",
+            "livro": "Deuses de Arton",
+            "pagina": "48"
         },
         {
             "chance": "61-61",
-            "nome": "Aspersório"
+            "nome": "Aspersório",
+            "livro": "Deuses de Arton",
+            "pagina": "48"
         },
         {
             "chance": "62-62",
-            "nome": "Patuá"
+            "nome": "Patuá",
+            "livro": "Deuses de Arton",
+            "pagina": "49"
         },
         {
             "chance": "63-63",
-            "nome": "Panfleto de aforismos"
+            "nome": "Panfleto de aforismos",
+            "livro": "Deuses de Arton",
+            "pagina": "49"
         },
         {
             "chance": "64-64",
-            "nome": "Texto sagrado"
+            "nome": "Texto sagrado",
+            "livro": "Deuses de Arton",
+            "pagina": "49"
         },
         {
             "chance": "65-65",
-            "nome": "Hábito sacerdotal"
+            "nome": "Hábito sacerdotal",
+            "livro": "Deuses de Arton",
+            "pagina": "49"
         },
         {
             "chance": "66-66",
-            "nome": "Manto de alto sacerdote"
+            "nome": "Manto de alto sacerdote",
+            "livro": "Deuses de Arton",
+            "pagina": "49"
         },
         {
             "chance": "67-67",
-            "nome": "Sandálias"
+            "nome": "Sandálias",
+            "livro": "Deuses de Arton",
+            "pagina": "51"
         },
         {
             "chance": "68-68",
-            "nome": "Piercing de umbigo"
+            "nome": "Piercing de umbigo",
+            "livro": "Deuses de Arton",
+            "pagina": "51"
         },
         {
             "chance": "69-69",
-            "nome": "Incenso"
+            "nome": "Incenso",
+            "livro": "Deuses de Arton",
+            "pagina": "52"
         },
         {
             "chance": "70-70",
-            "nome": "Santa granada de mão"
+            "nome": "Santa granada de mão",
+            "livro": "Deuses de Arton",
+            "pagina": "52"
         },
         {
             "chance": "71-71",
-            "nome": "Fitilho consagrado"
+            "nome": "Fitilho consagrado",
+            "livro": "Deuses de Arton",
+            "pagina": "52"
         },
         {
             "chance": "72-72",
-            "nome": "Pena de anjo"
+            "nome": "Pena de anjo",
+            "livro": "Deuses de Arton",
+            "pagina": "52"
         },
         {
             "chance": "73-73",
-            "nome": "Ábaco"
+            "nome": "Ábaco",
+            "livro": "Heróis de Arton",
+            "pagina": "227"
         },
         {
             "chance": "74-74",
-            "nome": "Ampulheta"
+            "nome": "Ampulheta",
+            "livro": "Heróis de Arton",
+            "pagina": "227"
         },
         {
             "chance": "75-75",
-            "nome": "Astrolábio"
+            "nome": "Astrolábio",
+            "livro": "Heróis de Arton",
+            "pagina": "227"
         },
         {
             "chance": "76-76",
-            "nome": "Bainha adornada"
+            "nome": "Bainha adornada",
+            "livro": "Heróis de Arton",
+            "pagina": "227"
         },
         {
             "chance": "77-77",
-            "nome": "Bússola"
+            "nome": "Bússola",
+            "livro": "Heróis de Arton",
+            "pagina": "227"
         },
         {
             "chance": "78-78",
-            "nome": "Diagrama anatômico"
+            "nome": "Diagrama anatômico",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "79-79",
-            "nome": "Estrepes"
+            "nome": "Estrepes",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "80-80",
-            "nome": "Lampião de foco"
+            "nome": "Lampião de foco",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "81-81",
-            "nome": "Leque"
+            "nome": "Leque",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "82-82",
-            "nome": "Lupa"
+            "nome": "Lupa",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "83-83",
-            "nome": "Mapa (mestre define de qual região)"
+            "nome": "Mapa (mestre define de qual região)",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "84-84",
-            "nome": "Mecanismo de mola"
+            "nome": "Mecanismo de mola",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "85-85",
-            "nome": "Mochila discreta"
+            "nome": "Mochila discreta",
+            "livro": "Heróis de Arton",
+            "pagina": "230"
         },
         {
             "chance": "86-86",
-            "nome": "Sinete"
+            "nome": "Sinete",
+            "livro": "Heróis de Arton",
+            "pagina": "231"
         },
         {
             "chance": "87-87",
-            "nome": "Apito de caça"
+            "nome": "Apito de caça",
+            "livro": "Heróis de Arton",
+            "pagina": "231"
         },
         {
             "chance": "88-88",
-            "nome": "Baralho marcado"
+            "nome": "Baralho marcado",
+            "livro": "Heróis de Arton",
+            "pagina": "231"
         },
         {
             "chance": "89-89",
-            "nome": "Clarim deheoni"
+            "nome": "Clarim deheoni",
+            "livro": "Heróis de Arton",
+            "pagina": "231"
         },
         {
             "chance": "90-90",
-            "nome": "Pandeiro das estradas"
+            "nome": "Pandeiro das estradas",
+            "livro": "Heróis de Arton",
+            "pagina": "231"
         },
         {
             "chance": "91-91",
-            "nome": "Camisolão"
+            "nome": "Camisolão",
+            "livro": "Heróis de Arton",
+            "pagina": "232"
         },
         {
             "chance": "92-92",
-            "nome": "Casaca de apetrechos"
+            "nome": "Casaca de apetrechos",
+            "livro": "Heróis de Arton",
+            "pagina": "232"
         },
         {
             "chance": "93-93",
-            "nome": "Chapéu emplumado"
+            "nome": "Chapéu emplumado",
+            "livro": "Heróis de Arton",
+            "pagina": "232"
         },
         {
             "chance": "94-94",
-            "nome": "Elmo leve"
+            "nome": "Elmo leve",
+            "livro": "Heróis de Arton",
+            "pagina": "232"
         },
         {
             "chance": "95-95",
-            "nome": "Elmo pesado"
+            "nome": "Elmo pesado",
+            "livro": "Heróis de Arton",
+            "pagina": "232"
         },
         {
             "chance": "96-96",
-            "nome": "Rondel"
+            "nome": "Rondel",
+            "livro": "Heróis de Arton",
+            "pagina": "233"
         },
         {
             "chance": "97-97",
-            "nome": "Sapatos confortáveis"
+            "nome": "Sapatos confortáveis",
+            "livro": "Heróis de Arton",
+            "pagina": "233"
         },
         {
             "chance": "98-98",
-            "nome": "Sapatos de salto alto"
+            "nome": "Sapatos de salto alto",
+            "livro": "Heróis de Arton",
+            "pagina": "233"
         },
         {
             "chance": "99-99",
-            "nome": "Ácido concentrado"
+            "nome": "Ácido concentrado",
+            "livro": "Heróis de Arton",
+            "pagina": "234"
         },
         {
             "chance": "100-100",
-            "nome": "Frasco abissal"
+            "nome": "Frasco abissal",
+            "livro": "Heróis de Arton",
+            "pagina": "234"
         }
     ],
     "pocoes": [
         {
             "chance": "01-01",
-            "nome": "Abençoar Alimentos (óleo)"
+            "nome": "Abençoar Alimentos (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "178"
         },
         {
             "chance": "02-02",
-            "nome": "Área Escorregadia (granada)"
+            "nome": "Área Escorregadia (granada)",
+            "livro": "Tormenta20",
+            "pagina": "180"
         },
         {
             "chance": "03-04",
-            "nome": "Arma Mágica (óleo)"
+            "nome": "Arma Mágica (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "181"
         },
         {
             "chance": "05-05",
-            "nome": "Compreensão"
+            "nome": "Compreensão",
+            "livro": "Tormenta20",
+            "pagina": "184"
         },
         {
             "chance": "06-11",
-            "nome": "Curar Ferimentos (2d8+2 PV)"
+            "nome": "Curar Ferimentos (2d8+2 PV)",
+            "livro": "Tormenta20",
+            "pagina": "189"
         },
         {
             "chance": "12-13",
-            "nome": "Disfarce Ilusório"
+            "nome": "Disfarce Ilusório",
+            "livro": "Tormenta20",
+            "pagina": "191"
         },
         {
             "chance": "14-15",
-            "nome": "Escuridão (óleo)"
+            "nome": "Escuridão (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "193"
         },
         {
             "chance": "16-17",
-            "nome": "Luz (óleo)"
+            "nome": "Luz (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "197"
         },
         {
             "chance": "18-18",
-            "nome": "Névoa (granada)"
+            "nome": "Névoa (granada)",
+            "livro": "Tormenta20",
+            "pagina": "200"
         },
         {
             "chance": "19-19",
-            "nome": "Primor Atlético"
+            "nome": "Primor Atlético",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "20-20",
-            "nome": "Sono"
+            "nome": "Sono",
+            "livro": "Tormenta20",
+            "pagina": "207"
         },
         {
             "chance": "21-22",
-            "nome": "Proteção Divina"
+            "nome": "Proteção Divina",
+            "livro": "Tormenta20",
+            "pagina": "202"
         },
         {
             "chance": "23-24",
-            "nome": "Resistência a Energia"
+            "nome": "Resistência a Energia",
+            "livro": "Tormenta20",
+            "pagina": "204"
         },
         {
             "chance": "25-25",
-            "nome": "Suporte Ambiental"
+            "nome": "Suporte Ambiental",
+            "livro": "Tormenta20",
+            "pagina": "207"
         },
         {
             "chance": "26-26",
-            "nome": "Tranca Arcana (óleo)"
+            "nome": "Tranca Arcana (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "209"
         },
         {
             "chance": "27-27",
-            "nome": "Visão Mística"
+            "nome": "Visão Mística",
+            "livro": "Tormenta20",
+            "pagina": "211"
         },
         {
             "chance": "28-28",
-            "nome": "Vitalidade Fantasma"
+            "nome": "Vitalidade Fantasma",
+            "livro": "Tormenta20",
+            "pagina": "211"
         },
         {
             "chance": "29-29",
-            "nome": "Armadura Elemental"
+            "nome": "Armadura Elemental",
+            "livro": "Heróis de Arton",
+            "pagina": "252"
         },
         {
             "chance": "30-30",
-            "nome": "Desafio Corajoso"
+            "nome": "Desafio Corajoso",
+            "livro": "Heróis de Arton",
+            "pagina": "252"
         },
         {
             "chance": "31-31",
-            "nome": "Discrição"
+            "nome": "Discrição",
+            "livro": "Heróis de Arton",
+            "pagina": "253"
         },
         {
             "chance": "32-32",
-            "nome": "Farejar Fortuna"
+            "nome": "Farejar Fortuna",
+            "livro": "Heróis de Arton",
+            "pagina": "254"
         },
         {
             "chance": "33-33",
-            "nome": "Maaais Klunc"
+            "nome": "Maaais Klunc",
+            "livro": "Heróis de Arton",
+            "pagina": "254"
         },
         {
             "chance": "34-34",
-            "nome": "Ossos de Adamante"
+            "nome": "Ossos de Adamante",
+            "livro": "Heróis de Arton",
+            "pagina": "254"
         },
         {
             "chance": "35-35",
-            "nome": "Punho de Mitral"
+            "nome": "Punho de Mitral",
+            "livro": "Heróis de Arton",
+            "pagina": "254"
         },
         {
             "chance": "36-36",
-            "nome": "Magia Dadivosa"
+            "nome": "Magia Dadivosa",
+            "livro": "Deuses de Arton",
+            "pagina": "62"
         },
         {
             "chance": "37-37",
-            "nome": "Sigilo de Sszzaas"
+            "nome": "Sigilo de Sszzaas",
+            "livro": "Deuses de Arton",
+            "pagina": "64"
         },
         {
             "chance": "38-38",
-            "nome": "Sorriso da Fortuna"
+            "nome": "Sorriso da Fortuna",
+            "livro": "Deuses de Arton",
+            "pagina": "64"
         },
         {
             "chance": "39-39",
-            "nome": "Toque de Megalokk"
+            "nome": "Toque de Megalokk",
+            "livro": "Deuses de Arton",
+            "pagina": "65"
         },
         {
             "chance": "40-40",
-            "nome": "Voz da Razão"
+            "nome": "Voz da Razão",
+            "livro": "Deuses de Arton",
+            "pagina": "65"
         },
         {
             "chance": "41-42",
-            "nome": "Escudo da Fé (aprimoramento para duração cena)"
+            "nome": "Escudo da Fé (aprimoramento para duração cena)",
+            "livro": "Tormenta20",
+            "pagina": "192"
         },
         {
             "chance": "43-44",
-            "nome": "Alterar Tamanho"
+            "nome": "Alterar Tamanho",
+            "livro": "Tormenta20",
+            "pagina": "179"
         },
         {
             "chance": "45-45",
-            "nome": "Aparência Perfeita"
+            "nome": "Aparência Perfeita",
+            "livro": "Tormenta20",
+            "pagina": "180"
         },
         {
             "chance": "46-46",
-            "nome": "Armamento da Natureza (óleo)"
+            "nome": "Armamento da Natureza (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "181"
         },
         {
             "chance": "47-50",
-            "nome": "Bola de Fogo (granada)"
+            "nome": "Bola de Fogo (granada)",
+            "livro": "Tormenta20",
+            "pagina": "182"
         },
         {
             "chance": "51-51",
-            "nome": "Camuflagem Ilusória"
+            "nome": "Camuflagem Ilusória",
+            "livro": "Tormenta20",
+            "pagina": "183"
         },
         {
             "chance": "52-52",
-            "nome": "Concentração de Combate (aprimoramento para duração cena)"
+            "nome": "Concentração de Combate (aprimoramento para duração cena)",
+            "livro": "Tormenta20",
+            "pagina": "185"
         },
         {
             "chance": "53-56",
-            "nome": "Curar Ferimentos (4d8+4 PV)"
+            "nome": "Curar Ferimentos (4d8+4 PV)",
+            "livro": "Tormenta20",
+            "pagina": "189"
         },
         {
             "chance": "57-58",
-            "nome": "Físico Divino"
+            "nome": "Físico Divino",
+            "livro": "Tormenta20",
+            "pagina": "193"
         },
         {
             "chance": "59-59",
-            "nome": "Mente Divina"
+            "nome": "Mente Divina",
+            "livro": "Tormenta20",
+            "pagina": "198"
         },
         {
             "chance": "60-60",
-            "nome": "Metamorfose"
+            "nome": "Metamorfose",
+            "livro": "Tormenta20",
+            "pagina": "198"
         },
         {
             "chance": "61-64",
-            "nome": "Purificação"
+            "nome": "Purificação",
+            "livro": "Tormenta20",
+            "pagina": "202"
         },
         {
             "chance": "65-66",
-            "nome": "Velocidade"
+            "nome": "Velocidade",
+            "livro": "Tormenta20",
+            "pagina": "210"
         },
         {
             "chance": "67-68",
-            "nome": "Vestimenta da Fé (óleo)"
+            "nome": "Vestimenta da Fé (óleo)",
+            "livro": "Tormenta20",
+            "pagina": "210"
         },
         {
             "chance": "69-69",
-            "nome": "Voz Divina"
+            "nome": "Voz Divina",
+            "livro": "Tormenta20",
+            "pagina": "211"
         },
         {
             "chance": "70-71",
-            "nome": "Orientação (aprimoramento para duração cena; role o atributo afetado, sendo 1 = Força, 2 = Destreza e assim por diante)"
+            "nome": "Orientação (aprimoramento para duração cena; role o atributo afetado, sendo 1 = Força, 2 = Destreza e assim por diante)",
+            "livro": "Tormenta20",
+            "pagina": "200"
         },
         {
             "chance": "72-72",
-            "nome": "Aura de Morte"
+            "nome": "Aura de Morte",
+            "livro": "Heróis de Arton",
+            "pagina": "252"
         },
         {
             "chance": "73-73",
-            "nome": "Emular Magia"
+            "nome": "Emular Magia",
+            "livro": "Heróis de Arton",
+            "pagina": "253"
         },
         {
             "chance": "74-74",
-            "nome": "Punho de Mitral (aprimoramento para +2 em testes de ataque e margem de ameaça)"
+            "nome": "Punho de Mitral (aprimoramento para +2 em testes de ataque e margem de ameaça)",
+            "livro": "Heróis de Arton",
+            "pagina": "255"
         },
         {
             "chance": "75-75",
-            "nome": "Viagem Onírica"
+            "nome": "Viagem Onírica",
+            "livro": "Heróis de Arton",
+            "pagina": "255"
         },
         {
             "chance": "76-76",
-            "nome": "Couraça de Allihanna (óleo)"
+            "nome": "Couraça de Allihanna (óleo)",
+            "livro": "Deuses de Arton",
+            "pagina": "60"
         },
         {
             "chance": "77-77",
-            "nome": "Toque de Megalokk (aprimoramento para aumentar o dano das armas naturais em um passo e a margem de ameaça delas em +1 )"
+            "nome": "Toque de Megalokk (aprimoramento para aumentar o dano das armas naturais em um passo e a margem de ameaça delas em +1 )",
+            "livro": "Deuses de Arton",
+            "pagina": "65"
         },
         {
             "chance": "78-79",
-            "nome": "Arma Mágica (óleo; aprimoramento para bônus +3)"
+            "nome": "Arma Mágica (óleo; aprimoramento para bônus +3)",
+            "livro": "Tormenta20",
+            "pagina": "181"
         },
         {
             "chance": "80-81",
-            "nome": "Proteção Divina (aprimoramento para bônus de +4)"
+            "nome": "Proteção Divina (aprimoramento para bônus de +4)",
+            "livro": "Tormenta20",
+            "pagina": "202"
         },
         {
             "chance": "82-82",
-            "nome": "Armadura Elemental (aprimoramento para 4d6 pontos de dano)"
+            "nome": "Armadura Elemental (aprimoramento para 4d6 pontos de dano)",
+            "livro": "Heróis de Arton",
+            "pagina": "252"
         },
         {
             "chance": "83-88",
-            "nome": "Curar Ferimentos (7d8+7 PV)"
+            "nome": "Curar Ferimentos (7d8+7 PV)",
+            "livro": "Tormenta20",
+            "pagina": "189"
         },
         {
             "chance": "89-90",
-            "nome": "Físico Divino (aprimoramento para três atributos)"
+            "nome": "Físico Divino (aprimoramento para três atributos)",
+            "livro": "Tormenta20",
+            "pagina": "193"
         },
         {
             "chance": "91-92",
-            "nome": "Invisibilidade (aprimoramento para duração cena)"
+            "nome": "Invisibilidade (aprimoramento para duração cena)",
+            "livro": "Tormenta20",
+            "pagina": "195"
         },
         {
             "chance": "93-94",
-            "nome": "Pele de Pedra"
+            "nome": "Pele de Pedra",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "95-95",
-            "nome": "Potência Divina"
+            "nome": "Potência Divina",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "96-96",
-            "nome": "Voo"
+            "nome": "Voo",
+            "livro": "Tormenta20",
+            "pagina": "211"
         },
         {
             "chance": "97-97",
-            "nome": "Percepção Rubra (aprimoramento para aumentar bônus em +3)"
+            "nome": "Percepção Rubra (aprimoramento para aumentar bônus em +3)",
+            "livro": "Deuses de Arton",
+            "pagina": "63"
         },
         {
             "chance": "98-100",
-            "nome": "Bola de Fogo (granada; aprimoramento para 10d6 de dano)"
+            "nome": "Bola de Fogo (granada; aprimoramento para 10d6 de dano)",
+            "livro": "Tormenta20",
+            "pagina": "182"
         },
         {
             "chance": "101-110",
-            "nome": "Curar Ferimentos (11d8+11 PV)"
+            "nome": "Curar Ferimentos (11d8+11 PV)",
+            "livro": "Tormenta20",
+            "pagina": "189"
         },
         {
             "chance": "111-114",
-            "nome": "Pele de Pedra (aprimoramento para pele de aço e RD 10)"
+            "nome": "Pele de Pedra (aprimoramento para pele de aço e RD 10)",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "115-116",
-            "nome": "Premonição"
+            "nome": "Premonição",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "117-117",
-            "nome": "Viagem Onírica (aprimoramentos para falar e lançar magias)"
+            "nome": "Viagem Onírica (aprimoramentos para falar e lançar magias)",
+            "livro": "Heróis de Arton",
+            "pagina": "255"
         },
         {
             "chance": "118-118",
-            "nome": "Potência Divina (aprimoramento para Força +6 e RD 15)"
+            "nome": "Potência Divina (aprimoramento para Força +6 e RD 15)",
+            "livro": "Tormenta20",
+            "pagina": "201"
         },
         {
             "chance": "119-119",
-            "nome": "Momento de Tormenta (granada; aprimoramento para +4 dados de dano do mesmo tipo)"
+            "nome": "Momento de Tormenta (granada; aprimoramento para +4 dados de dano do mesmo tipo)",
+            "livro": "Ameaças de Arton",
+            "pagina": "404"
         },
         {
             "chance": "120-120",
-            "nome": "Transformação em Dragão (aprimoramentos para atributos +4, asas, arma de mordida e dano de sopro de 12d6+12)"
+            "nome": "Transformação em Dragão (aprimoramentos para atributos +4, asas, arma de mordida e dano de sopro de 12d6+12)",
+            "livro": "Ameaças de Arton",
+            "pagina": "405"
         }
     ],
     "riquezas": [],

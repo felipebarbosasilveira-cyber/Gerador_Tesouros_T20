@@ -23,7 +23,11 @@ def extrair_tabela(nome_aba, col_nome):
     for _, row in df.iterrows():
         chance = arrumar_chance(row.get('d%'))
         if chance and pd.notna(row.get(col_nome)):
-            lista.append({"chance": chance, "nome": str(row[col_nome])})
+            livro = str(row.get('Livro', ''))
+            pagina = str(row.get('Página', ''))
+            if livro == 'nan': livro = ""
+            if pagina == 'nan': pagina = ""
+            lista.append({"chance": chance, "nome": str(row[col_nome]), "livro": livro, "pagina": pagina})
     return lista
 
 def extrair_multi_tabela(nome_aba):

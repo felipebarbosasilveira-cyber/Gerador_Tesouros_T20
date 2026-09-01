@@ -73,19 +73,28 @@ let bd = {};
         return { nome: "Nenhum" };
     }
 
-function resolverFinal(tipoBase) {
+    function formataItem(obj) {
+        let txt = `<strong>${obj.nome}</strong>`;
+        if (obj.livro && obj.livro !== "nan" && obj.livro !== "") {
+            let pag = String(obj.pagina).replace('.0', '');
+            txt += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${obj.livro} p.${pag}]</span>`;
+        }
+        return txt;
+    }
+
+    function resolverFinal(tipoBase) {
         if (!tipoBase || tipoBase === "—") return "Nenhum";
         let text = tipoBase.toLowerCase();
         let r = rolarD100();
 
-        if (text.includes("diverso")) return `Item Diverso: <strong>${buscarItem(bd.itens_diversos, r).nome}</strong>`;
-        if (text.includes("poção") || text.includes("poções")) return `Poção: <strong>${buscarItem(bd.pocoes, r).nome}</strong>`;
-        if (text.includes("riqueza")) return `Riqueza: <strong>${buscarItem(bd.riquezas, r).nome}</strong>`;
+        if (text.includes("diverso")) return `Item Diverso: ${formataItem(buscarItem(bd.itens_diversos, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+        if (text.includes("poção") || text.includes("poções")) return `Poção: ${formataItem(buscarItem(bd.pocoes, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+        if (text.includes("riqueza")) return `Riqueza: ${formataItem(buscarItem(bd.riquezas, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
         
         if (text.includes("equipamento")) {
             let d6 = rolarD6();
             let sub = d6 <= 3 ? "Armas" : (d6 <= 5 ? "Armaduras" : "Esotericos");
-            return `Equipamento (${sub}): <strong>${buscarItem(bd.equipamentos[sub], r).nome}</strong>`;
+            return `Equipamento (${sub}): ${formataItem(buscarItem(bd.equipamentos[sub], r))} <span style="font-size:12px;color:#aaa;">(1d6: ${d6} | d%: ${r})</span>`;
         }
         
         if (text.includes("superior") || text.includes("mágico")) {
