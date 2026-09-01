@@ -43,6 +43,16 @@
         <option value="19">ND 19</option>
         <option value="20">ND 20</option>
     </select>
+
+    <div style="display: flex; gap: 20px; justify-content: center; margin: 15px 0;">
+        <label style="cursor: pointer; font-size: 16px; color: #ddd;">
+            <input type="checkbox" id="check-dinh" checked style="transform: scale(1.2); margin-right: 5px;"> Dinheiro
+        </label>
+        <label style="cursor: pointer; font-size: 16px; color: #ddd;">
+            <input type="checkbox" id="check-itens" checked style="transform: scale(1.2); margin-right: 5px;"> Itens
+        </label>
+    </div>
+
     <button onclick="gerarTesouro()">Rolar Tesouro</button>
     <div id="historico"></div>
 
@@ -75,6 +85,14 @@ let bd = {};
 
     function formataItem(obj) {
         let txt = `<strong>${obj.nome}</strong>`;
+        
+        // Adiciona a etiqueta de Espaços (se existir na tabela)
+        if (obj.espacos && obj.espacos !== "" && obj.espacos !== "nan") {
+            let esp = String(obj.espacos).replace('.0', '');
+            txt += ` <span style="font-size:12px;color:#4db8ff;font-weight:bold;">[Espaços: ${esp}]</span>`;
+        }
+        
+        // Adiciona a etiqueta de Livro/Página (se existir na tabela)
         if (obj.livro && obj.livro !== "nan" && obj.livro !== "") {
             let pag = String(obj.pagina).replace('.0', '');
             txt += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${obj.livro} p.${pag}]</span>`;
@@ -89,7 +107,12 @@ let bd = {};
 
         if (text.includes("diverso")) return `Item Diverso: ${formataItem(buscarItem(bd.itens_diversos, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
         if (text.includes("poção") || text.includes("poções")) return `Poção: ${formataItem(buscarItem(bd.pocoes, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
-        if (text.includes("riqueza")) return `Riqueza: ${formataItem(buscarItem(bd.riquezas, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+        if (text.includes("riqueza")) {
+            let cat = "menor";
+            if (text.includes("média") || text.includes("media")) cat = "media";
+            if (text.includes("maior") || text.includes("maiores")) cat = "maior";
+            return `Riqueza: ${formataItem(buscarItem(bd.riquezas[cat], r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+        }
         
         if (text.includes("equipamento")) {
             let d6 = rolarD6();
@@ -243,31 +266,169 @@ let bd = {};
         setTimeout(() => botao.innerText = 'Copiar', 2000);
     }
 
-    function gerarTesouro() {
+function gerarTesouro() {
         if (!bd.tesouro_nd) return;
         const nd = document.getElementById("nd-select").value;
-        const dDinh = rolarD100(), dItens = rolarD100();
+        
+        const querDinh = document.getElementById("check-dinh").checked;
+        const querItens = document.getElementById("check-itens").checked;
+
+        if (!querDinh && !querItens) {
+            alert("Selecione pelo menos uma opção (Dinheiro ou Itens) para rolar!");
+            return;
+        }
+
+        const dDinh = querDinh ? rolarD100() : 0;
+        const dItens = querItens ? rolarD100() : 0;
         const tab = bd.tesouro_nd.filter(i => i.nd == nd);
         
         let txtD = "Nenhum", txtI = "Nenhum";
         for (let l of tab) {
-            if (checa(l.chance_dinheiro, dDinh)) txtD = l.dinheiro;
-            if (checa(l.chance_itens, dItens)) txtI = l.itens;
+            if (querDinh && checa(l.chance_dinheiro, dDinh)) txtD = l.dinheiro;
+            if (querItens && checa(l.chance_itens, dItens)) txtI = l.itens;
         }
 
-        let itemResolvido = txtI !== "—" ? resolverFinal(txtI) : "Nenhum";
+        let itemResolvido = "Não rolado";
+        if (querItens) {
+            itemResolvido = txtI !== "—" ? resolverFinal(txtI) : "Nenhum";
+        }
+        
+        let dinhResolvido = querDinh ? txtD : "Não rolado";
+        
+        if (querDinh) {
+            let txtDLower = txtD.toLowerCase();
+
+            if (txtDLower.includes("riqueza") || txtDLower.includes("poção") || txtDLower.includes("poções")) {
+                let match = txtDLower.match(/(\d+)d(\d+)(?:\+(\d+))?/);
+                let qtd = 1; 
+                
+                if (match) {
+                    let dados = parseInt(match[1]);
+                    let faces = parseInt(match[2]);
+                    let fixo = match[3] ? parseInt(match[3]) : 0;
+                    qtd = fixo;
+                    for(let i=0; i < dados; i++) qtd += Math.floor(Math.random() * faces) + 1;
+                }
+
+                let isRiqueza = txtDLower.includes("riqueza");
+                let hasBonus = txtDLower.includes("+%"); 
+                
+                let htmlAcumulado = `<div style="margin-top: 6px; padding-left: 10px; border-left: 2px solid #fbc02d;">
+                    <div style="font-size:12px; color:#aaa; margin-bottom:6px; font-style:italic;">(Sorteados ${qtd} itens automaticamente)</div>`;
+                    
+                for(let i=0; i < qtd; i++) {
+                    let r = rolarD100();
+                    let rFinal = hasBonus ? Math.min(100, r + 20) : r; 
+                    let bonusTxt = hasBonus ? ` (+20)` : ``;
+                    
+                if (isRiqueza) {
+                    let cat = "menor";
+                    if (txtDLower.includes("média") || txtDLower.includes("media")) cat = "media";
+                    if (txtDLower.includes("maior") || txtDLower.includes("maiores")) cat = "maior";
+                    
+                    let item = buscarItem(bd.riquezas[cat], rFinal);
+                    let espacoObj = rolarEspacoRiqueza();
+                    
+                    let tagPreco = "";
+                    let textoFull = item.nome;
+                    
+                    let matchPreco = textoFull.match(/^(<span.*?>.*?<\/span>)\s*([\s\S]*)/i);
+                    if (matchPreco) {
+                        tagPreco = matchPreco[1] + " ";
+                        textoFull = matchPreco[2];
+                    }
+                    
+                    let blocos = textoFull.split(/;(?=\s*(?:[\d,]+|—)(?:\s*espaço|:))/i);
+                    let textoFiltrado = null;
+                    
+                    for (let b of blocos) {
+                        let linha = b.replace(/\n/g, " ").trim();
+                        let regexPeso = new RegExp("^" + espacoObj.valor.replace(',', '\\,?') + "\\s*espaço", "i");
+                        if (regexPeso.test(linha)) {
+                            textoFiltrado = "Exemplo: " + linha.replace(/^.*?:/, "").trim();
+                            break;
+                        }
+                    }
+                    
+                    if (!textoFiltrado) {
+                        textoFiltrado = ""; 
+                    }
+                    
+                    let itemDisplay = {...item, nome: tagPreco + textoFiltrado};
+                    
+                    // Condicional inteligente: só quebra a linha se houver texto de exemplo longo
+                    let temExemplo = textoFiltrado.includes("Exemplo:");
+                    let separador = temExemplo ? `<br>` : ` `;
+                    let margemInferior = temExemplo ? `margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px dashed rgba(255,255,255,0.05);` : `margin-bottom: 4px;`;
+                    
+                    htmlAcumulado += `<div style="${margemInferior}">💎 ${formataItem(itemDisplay)}${separador}<span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span> ${espacoObj.tag}</div>`;
+                } else {
+                    let item = buscarItem(bd.pocoes, rFinal);
+                    htmlAcumulado += `<div style="margin-bottom: 4px;">🧪 ${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span></div>`;
+                }
+
+                }
+                htmlAcumulado += `</div>`;
+                dinhResolvido = `<strong>${txtD}</strong> ${htmlAcumulado}`;
+            }
+        }
 
         const res = document.createElement("div");
         res.className = "card-resultado";
+        
+        // NOVA LÓGICA DE ABAS: Abre se você marcou a caixinha, independente de ser "Nenhum"
+        let abaDinhAberta = querDinh ? "open" : "";
+        let abaItensAberta = querItens ? "open" : "";
+        
+        let txtRolDinh = querDinh ? `[d%: ${dDinh}]` : `[—]`;
+        let txtRolItens = querItens ? `[d%: ${dItens}]` : `[—]`;
+
         res.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span>ND: <strong>${nd}</strong></span>
-                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555;" onclick="copiarCard(this, '${nd}', '${txtD}')">Copiar</button>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-size: 16px;">ND: <strong>${nd}</strong></span>
+                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;" onclick="copiarCard(this, '${nd}', '${querDinh ? txtD : "—"}')">Copiar</button>
             </div>
-            <hr style="border-color: #444; margin: 10px 0;">
-            <div><span class="rolagem">[d% Dinh: ${dDinh}]</span> -> ${txtD}</div>
-            <div class="bloco-itens" style="margin-top:8px;"><span class="rolagem">[d% Itens: ${dItens}]</span> -> ${itemResolvido}</div>`;
+            
+            <!-- ABA DE DINHEIRO -->
+            <details ${abaDinhAberta} style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; margin-bottom: 6px; border-left: 3px solid #fbc02d; opacity: ${querDinh ? '1' : '0.4'};">
+                <summary style="cursor: pointer; font-weight: bold; outline: none; list-style: none; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 16px;">💰 Dinheiro</span> 
+                    <span class="rolagem" style="font-size: 12px; font-weight: normal; margin-left: auto;">${txtRolDinh}</span>
+                </summary>
+                <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; line-height: 1.4;">
+                    ${dinhResolvido}
+                </div>
+            </details>
+
+            <!-- ABA DE ITENS -->
+            <details ${abaItensAberta} style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; border-left: 3px solid #ff4d4d; opacity: ${querItens ? '1' : '0.4'};">
+                <summary style="cursor: pointer; font-weight: bold; outline: none; list-style: none; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 16px;">⚔️ Itens</span> 
+                    <span class="rolagem" style="font-size: 12px; font-weight: normal; margin-left: auto;">${txtRolItens}</span>
+                </summary>
+                <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; line-height: 1.4;">
+                    ${itemResolvido}
+                </div>
+            </details>
+        `;
         document.getElementById("historico").prepend(res);
+    }
+
+function rolarEspacoRiqueza() {
+        let r = Math.floor(Math.random() * 20) + 1;
+        let esp, desc;
+        if (r <= 4) { esp = "0,5"; desc = "Anel, brincos ou gema"; }
+        else if (r <= 8) { esp = "1"; desc = "Cálice, estatueta ou braceletes"; }
+        else if (r <= 12) { esp = "2"; desc = "Arma de duas mãos ou baú"; }
+        else if (r <= 15) { esp = "5"; desc = "Armadura completa ou barril"; }
+        else if (r <= 17) { esp = "10"; desc = "Quadro de parede ou busto"; }
+        else if (r <= 19) { esp = "20"; desc = "Arca de moedas ou estátua"; }
+        else { esp = "100"; desc = "Coleção de estátuas ou veículo"; }
+        
+        return {
+            tag: `<span style="font-size:12px;color:#4db8ff;cursor:help;" title="${desc}">[Espaços: ${esp} (d20: ${r})]</span>`,
+            valor: esp
+        };
     }
 </script>
 </body>

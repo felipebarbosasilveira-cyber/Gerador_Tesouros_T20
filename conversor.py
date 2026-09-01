@@ -19,15 +19,29 @@ def arrumar_chance(valor):
 def extrair_tabela(nome_aba, col_nome):
     if nome_aba not in xls.sheet_names: return []
     df = pd.read_excel(xls, sheet_name=nome_aba)
+    
+    col_espaco = None
+    for col in df.columns:
+        if "espaço" in str(col).lower() or "espaco" in str(col).lower():
+            col_espaco = col
+            break
+
     lista = []
     for _, row in df.iterrows():
         chance = arrumar_chance(row.get('d%'))
         if chance and pd.notna(row.get(col_nome)):
             livro = str(row.get('Livro', ''))
             pagina = str(row.get('Página', ''))
+            espacos = str(row[col_espaco]) if col_espaco and pd.notna(row[col_espaco]) else ""
+            
             if livro == 'nan': livro = ""
             if pagina == 'nan': pagina = ""
-            lista.append({"chance": chance, "nome": str(row[col_nome]), "livro": livro, "pagina": pagina})
+            if espacos == 'nan' or espacos == 'None': espacos = ""
+            
+            lista.append({
+                "chance": chance, "nome": str(row[col_nome]), 
+                "livro": livro, "pagina": pagina, "espacos": espacos
+            })
     return lista
 
 def extrair_multi_tabela(nome_aba):
@@ -47,6 +61,43 @@ def extrair_multi_tabela(nome_aba):
         c_esot = arrumar_chance(row.iloc[10])
         if c_esot and pd.notna(row.iloc[11]): 
             tabela['Esotericos'].append({"chance": c_esot, "nome": str(row.iloc[11]), "livro": str(row.iloc[12]) if pd.notna(row.iloc[12]) else "", "pagina": str(row.iloc[13]) if pd.notna(row.iloc[13]) else ""})
+    return tabela
+
+def extrair_riquezas():
+    df = pd.read_excel(xls, sheet_name='Riquezas')
+    tabela = {"menor": [], "media": [], "maior": []}
+
+    for i_row, row in df.iterrows():
+        # Pula as linhas de cabeçalho perdidas pelo Excel
+        if "MENOR" in str(row.iloc[0]).upper() or "D%" in str(row.iloc[0]).upper() or "RIQUEZA" in str(row.iloc[0]).upper():
+            continue
+
+        # Garante que a linha tem colunas suficientes e possui texto de exemplo
+        if len(row) < 5 or pd.isna(row.iloc[4]):
+            continue
+
+        # O texto da riqueza está na coluna 4 (Exemplos) e o valor está na coluna 3 (Valor T$)
+        texto_exemplo = str(row.iloc[4]).strip()
+        valor_ts = str(row.iloc[3]).strip() if pd.notna(row.iloc[3]) else ""
+        
+        # Junta o valor em dinheiro com os exemplos para exibir tudo no card
+        nome_final = f"<span style='color:#fbc02d;'>[T$ {valor_ts}]</span> {texto_exemplo}" if valor_ts and valor_ts != "nan" else texto_exemplo
+
+        # Menor (Coluna 0)
+        c_men = arrumar_chance(row.iloc[0])
+        if c_men and str(c_men) not in ['-', '–', '—', 'nan']:
+            tabela["menor"].append({"chance": c_men, "nome": nome_final, "espacos": ""})
+
+        # Média (Coluna 1)
+        c_med = arrumar_chance(row.iloc[1])
+        if c_med and str(c_med) not in ['-', '–', '—', 'nan']:
+            tabela["media"].append({"chance": c_med, "nome": nome_final, "espacos": ""})
+
+        # Maior (Coluna 2)
+        c_mai = arrumar_chance(row.iloc[2])
+        if c_mai and str(c_mai) not in ['-', '–', '—', 'nan']:
+            tabela["maior"].append({"chance": c_mai, "nome": nome_final, "espacos": ""})
+
     return tabela
 
 def extrair_acessorios():
@@ -134,7 +185,7 @@ for _, row in df_nd.iterrows():
 # 2. Demais Tabelas
 bd['itens_diversos'] = extrair_tabela('Itens Diversos', 'Item')
 bd['pocoes'] = extrair_tabela('Poções', 'Poção')
-bd['riquezas'] = extrair_tabela('Riquezas', 'Riqueza')
+bd['riquezas'] = extrair_riquezas()
 bd['equipamentos'] = extrair_multi_tabela('Equipamentos')
 bd['superiores'] = extrair_multi_tabela('Superiores')
 bd['magicos'] = extrair_magicos()

@@ -643,577 +643,673 @@
             "chance": "01-01",
             "nome": "Ácido",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "02-02",
             "nome": "Água benta",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "03-03",
             "nome": "Alaúde élfico",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "04-04",
             "nome": "Algemas",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "05-05",
             "nome": "Baga-de-fogo",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "06-08",
             "nome": "Bálsamo restaurador",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "09-09",
             "nome": "Bandana",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "10-10",
             "nome": "Bandoleira de poções",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "11-11",
             "nome": "Bomba",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "12-12",
             "nome": "Botas reforçadas",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "13-13",
             "nome": "Camisa bufante",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "14-14",
             "nome": "Capa esvoaçante",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "15-15",
             "nome": "Capa pesada",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "16-16",
             "nome": "Casaco longo",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "17-17",
             "nome": "Chapéu arcano",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "18-18",
             "nome": "Coleção de livros",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "19-19",
             "nome": "Cosmético",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "20-20",
             "nome": "Dente-de-dragão",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "21-21",
             "nome": "Enfeite de elmo",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "22-22",
             "nome": "Elixir do amor",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "23-23",
             "nome": "Equipamento de viagem",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "24-26",
             "nome": "Essência de mana",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "27-27",
             "nome": "Estojo de disfarces",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "28-28",
             "nome": "Farrapos de ermitão",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "29-29",
             "nome": "Flauta mística",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "30-30",
             "nome": "Fogo alquímico",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "31-31",
             "nome": "Gorro de ervas",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "32-32",
             "nome": "Líquen lilás",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "33-33",
             "nome": "Luneta",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "34-34",
             "nome": "Luva de pelica",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "35-35",
             "nome": "Maleta de medicamentos",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "36-36",
             "nome": "Manopla",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "37-37",
             "nome": "Manto eclesiástico",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "38-38",
             "nome": "Mochila de aventureiro",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "39-39",
             "nome": "Musgo púrpura",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "40-40",
             "nome": "Organizador de pergaminhos",
             "livro": "Tormenta20",
-            "pagina": "155"
+            "pagina": "155",
+            "espacos": ""
         },
         {
             "chance": "41-41",
             "nome": "Ossos de monstro",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "42-42",
             "nome": "Pó de cristal",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "43-43",
             "nome": "Pó de giz",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "44-44",
             "nome": "Pó do desaparecimento",
             "livro": "Tormenta20",
-            "pagina": "160"
+            "pagina": "160",
+            "espacos": ""
         },
         {
             "chance": "45-45",
             "nome": "Robe místico",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "46-46",
             "nome": "Saco de sal",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "47-47",
             "nome": "Sapatos de camurça",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "48-48",
             "nome": "Seixo de âmbar",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "49-49",
             "nome": "Sela",
             "livro": "Tormenta20",
-            "pagina": "158"
+            "pagina": "158",
+            "espacos": ""
         },
         {
             "chance": "50-50",
             "nome": "Tabardo",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "51-51",
             "nome": "Traje da corte",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "52-52",
             "nome": "Terra de cemitério",
             "livro": "Tormenta20",
-            "pagina": "161"
+            "pagina": "161",
+            "espacos": ""
         },
         {
             "chance": "53-53",
             "nome": "Veste de seda",
             "livro": "Tormenta20",
-            "pagina": "159"
+            "pagina": "159",
+            "espacos": ""
         },
         {
             "chance": "54-54",
             "nome": "Corda de teia",
             "livro": "Ameaças de Arton",
-            "pagina": "396"
+            "pagina": "396",
+            "espacos": ""
         },
         {
             "chance": "55-55",
             "nome": "Dente de wisphago",
             "livro": "Ameaças de Arton",
-            "pagina": "396"
+            "pagina": "396",
+            "espacos": ""
         },
         {
             "chance": "56-56",
             "nome": "Bomba de fumaça",
             "livro": "Ameaças de Arton",
-            "pagina": "396"
+            "pagina": "396",
+            "espacos": ""
         },
         {
             "chance": "57-57",
             "nome": "Elixir quimérico",
             "livro": "Ameaças de Arton",
-            "pagina": "396"
+            "pagina": "396",
+            "espacos": ""
         },
         {
             "chance": "58-58",
             "nome": "Éter elemental",
             "livro": "Ameaças de Arton",
-            "pagina": "396"
+            "pagina": "396",
+            "espacos": ""
         },
         {
             "chance": "59-59",
             "nome": "Óleo de besouro",
             "livro": "Ameaças de Arton",
-            "pagina": "397"
+            "pagina": "397",
+            "espacos": ""
         },
         {
             "chance": "60-60",
             "nome": "Água benta concentrada",
             "livro": "Deuses de Arton",
-            "pagina": "48"
+            "pagina": "48",
+            "espacos": ""
         },
         {
             "chance": "61-61",
             "nome": "Aspersório",
             "livro": "Deuses de Arton",
-            "pagina": "48"
+            "pagina": "48",
+            "espacos": ""
         },
         {
             "chance": "62-62",
             "nome": "Patuá",
             "livro": "Deuses de Arton",
-            "pagina": "49"
+            "pagina": "49",
+            "espacos": ""
         },
         {
             "chance": "63-63",
             "nome": "Panfleto de aforismos",
             "livro": "Deuses de Arton",
-            "pagina": "49"
+            "pagina": "49",
+            "espacos": ""
         },
         {
             "chance": "64-64",
             "nome": "Texto sagrado",
             "livro": "Deuses de Arton",
-            "pagina": "49"
+            "pagina": "49",
+            "espacos": ""
         },
         {
             "chance": "65-65",
             "nome": "Hábito sacerdotal",
             "livro": "Deuses de Arton",
-            "pagina": "49"
+            "pagina": "49",
+            "espacos": ""
         },
         {
             "chance": "66-66",
             "nome": "Manto de alto sacerdote",
             "livro": "Deuses de Arton",
-            "pagina": "49"
+            "pagina": "49",
+            "espacos": ""
         },
         {
             "chance": "67-67",
             "nome": "Sandálias",
             "livro": "Deuses de Arton",
-            "pagina": "51"
+            "pagina": "51",
+            "espacos": ""
         },
         {
             "chance": "68-68",
             "nome": "Piercing de umbigo",
             "livro": "Deuses de Arton",
-            "pagina": "51"
+            "pagina": "51",
+            "espacos": ""
         },
         {
             "chance": "69-69",
             "nome": "Incenso",
             "livro": "Deuses de Arton",
-            "pagina": "52"
+            "pagina": "52",
+            "espacos": ""
         },
         {
             "chance": "70-70",
             "nome": "Santa granada de mão",
             "livro": "Deuses de Arton",
-            "pagina": "52"
+            "pagina": "52",
+            "espacos": ""
         },
         {
             "chance": "71-71",
             "nome": "Fitilho consagrado",
             "livro": "Deuses de Arton",
-            "pagina": "52"
+            "pagina": "52",
+            "espacos": ""
         },
         {
             "chance": "72-72",
             "nome": "Pena de anjo",
             "livro": "Deuses de Arton",
-            "pagina": "52"
+            "pagina": "52",
+            "espacos": ""
         },
         {
             "chance": "73-73",
             "nome": "Ábaco",
             "livro": "Heróis de Arton",
-            "pagina": "227"
+            "pagina": "227",
+            "espacos": ""
         },
         {
             "chance": "74-74",
             "nome": "Ampulheta",
             "livro": "Heróis de Arton",
-            "pagina": "227"
+            "pagina": "227",
+            "espacos": ""
         },
         {
             "chance": "75-75",
             "nome": "Astrolábio",
             "livro": "Heróis de Arton",
-            "pagina": "227"
+            "pagina": "227",
+            "espacos": ""
         },
         {
             "chance": "76-76",
             "nome": "Bainha adornada",
             "livro": "Heróis de Arton",
-            "pagina": "227"
+            "pagina": "227",
+            "espacos": ""
         },
         {
             "chance": "77-77",
             "nome": "Bússola",
             "livro": "Heróis de Arton",
-            "pagina": "227"
+            "pagina": "227",
+            "espacos": ""
         },
         {
             "chance": "78-78",
             "nome": "Diagrama anatômico",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "79-79",
             "nome": "Estrepes",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "80-80",
             "nome": "Lampião de foco",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "81-81",
             "nome": "Leque",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "82-82",
             "nome": "Lupa",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "83-83",
             "nome": "Mapa (mestre define de qual região)",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "84-84",
             "nome": "Mecanismo de mola",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "85-85",
             "nome": "Mochila discreta",
             "livro": "Heróis de Arton",
-            "pagina": "230"
+            "pagina": "230",
+            "espacos": ""
         },
         {
             "chance": "86-86",
             "nome": "Sinete",
             "livro": "Heróis de Arton",
-            "pagina": "231"
+            "pagina": "231",
+            "espacos": ""
         },
         {
             "chance": "87-87",
             "nome": "Apito de caça",
             "livro": "Heróis de Arton",
-            "pagina": "231"
+            "pagina": "231",
+            "espacos": ""
         },
         {
             "chance": "88-88",
             "nome": "Baralho marcado",
             "livro": "Heróis de Arton",
-            "pagina": "231"
+            "pagina": "231",
+            "espacos": ""
         },
         {
             "chance": "89-89",
             "nome": "Clarim deheoni",
             "livro": "Heróis de Arton",
-            "pagina": "231"
+            "pagina": "231",
+            "espacos": ""
         },
         {
             "chance": "90-90",
             "nome": "Pandeiro das estradas",
             "livro": "Heróis de Arton",
-            "pagina": "231"
+            "pagina": "231",
+            "espacos": ""
         },
         {
             "chance": "91-91",
             "nome": "Camisolão",
             "livro": "Heróis de Arton",
-            "pagina": "232"
+            "pagina": "232",
+            "espacos": ""
         },
         {
             "chance": "92-92",
             "nome": "Casaca de apetrechos",
             "livro": "Heróis de Arton",
-            "pagina": "232"
+            "pagina": "232",
+            "espacos": ""
         },
         {
             "chance": "93-93",
             "nome": "Chapéu emplumado",
             "livro": "Heróis de Arton",
-            "pagina": "232"
+            "pagina": "232",
+            "espacos": ""
         },
         {
             "chance": "94-94",
             "nome": "Elmo leve",
             "livro": "Heróis de Arton",
-            "pagina": "232"
+            "pagina": "232",
+            "espacos": ""
         },
         {
             "chance": "95-95",
             "nome": "Elmo pesado",
             "livro": "Heróis de Arton",
-            "pagina": "232"
+            "pagina": "232",
+            "espacos": ""
         },
         {
             "chance": "96-96",
             "nome": "Rondel",
             "livro": "Heróis de Arton",
-            "pagina": "233"
+            "pagina": "233",
+            "espacos": ""
         },
         {
             "chance": "97-97",
             "nome": "Sapatos confortáveis",
             "livro": "Heróis de Arton",
-            "pagina": "233"
+            "pagina": "233",
+            "espacos": ""
         },
         {
             "chance": "98-98",
             "nome": "Sapatos de salto alto",
             "livro": "Heróis de Arton",
-            "pagina": "233"
+            "pagina": "233",
+            "espacos": ""
         },
         {
             "chance": "99-99",
             "nome": "Ácido concentrado",
             "livro": "Heróis de Arton",
-            "pagina": "234"
+            "pagina": "234",
+            "espacos": ""
         },
         {
             "chance": "100-100",
             "nome": "Frasco abissal",
             "livro": "Heróis de Arton",
-            "pagina": "234"
+            "pagina": "234",
+            "espacos": ""
         }
     ],
     "pocoes": [
@@ -1221,418 +1317,624 @@
             "chance": "01-01",
             "nome": "Abençoar Alimentos (óleo)",
             "livro": "Tormenta20",
-            "pagina": "178"
+            "pagina": "178",
+            "espacos": ""
         },
         {
             "chance": "02-02",
             "nome": "Área Escorregadia (granada)",
             "livro": "Tormenta20",
-            "pagina": "180"
+            "pagina": "180",
+            "espacos": ""
         },
         {
             "chance": "03-04",
             "nome": "Arma Mágica (óleo)",
             "livro": "Tormenta20",
-            "pagina": "181"
+            "pagina": "181",
+            "espacos": ""
         },
         {
             "chance": "05-05",
             "nome": "Compreensão",
             "livro": "Tormenta20",
-            "pagina": "184"
+            "pagina": "184",
+            "espacos": ""
         },
         {
             "chance": "06-11",
             "nome": "Curar Ferimentos (2d8+2 PV)",
             "livro": "Tormenta20",
-            "pagina": "189"
+            "pagina": "189",
+            "espacos": ""
         },
         {
             "chance": "12-13",
             "nome": "Disfarce Ilusório",
             "livro": "Tormenta20",
-            "pagina": "191"
+            "pagina": "191",
+            "espacos": ""
         },
         {
             "chance": "14-15",
             "nome": "Escuridão (óleo)",
             "livro": "Tormenta20",
-            "pagina": "193"
+            "pagina": "193",
+            "espacos": ""
         },
         {
             "chance": "16-17",
             "nome": "Luz (óleo)",
             "livro": "Tormenta20",
-            "pagina": "197"
+            "pagina": "197",
+            "espacos": ""
         },
         {
             "chance": "18-18",
             "nome": "Névoa (granada)",
             "livro": "Tormenta20",
-            "pagina": "200"
+            "pagina": "200",
+            "espacos": ""
         },
         {
             "chance": "19-19",
             "nome": "Primor Atlético",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "20-20",
             "nome": "Sono",
             "livro": "Tormenta20",
-            "pagina": "207"
+            "pagina": "207",
+            "espacos": ""
         },
         {
             "chance": "21-22",
             "nome": "Proteção Divina",
             "livro": "Tormenta20",
-            "pagina": "202"
+            "pagina": "202",
+            "espacos": ""
         },
         {
             "chance": "23-24",
             "nome": "Resistência a Energia",
             "livro": "Tormenta20",
-            "pagina": "204"
+            "pagina": "204",
+            "espacos": ""
         },
         {
             "chance": "25-25",
             "nome": "Suporte Ambiental",
             "livro": "Tormenta20",
-            "pagina": "207"
+            "pagina": "207",
+            "espacos": ""
         },
         {
             "chance": "26-26",
             "nome": "Tranca Arcana (óleo)",
             "livro": "Tormenta20",
-            "pagina": "209"
+            "pagina": "209",
+            "espacos": ""
         },
         {
             "chance": "27-27",
             "nome": "Visão Mística",
             "livro": "Tormenta20",
-            "pagina": "211"
+            "pagina": "211",
+            "espacos": ""
         },
         {
             "chance": "28-28",
             "nome": "Vitalidade Fantasma",
             "livro": "Tormenta20",
-            "pagina": "211"
+            "pagina": "211",
+            "espacos": ""
         },
         {
             "chance": "29-29",
             "nome": "Armadura Elemental",
             "livro": "Heróis de Arton",
-            "pagina": "252"
+            "pagina": "252",
+            "espacos": ""
         },
         {
             "chance": "30-30",
             "nome": "Desafio Corajoso",
             "livro": "Heróis de Arton",
-            "pagina": "252"
+            "pagina": "252",
+            "espacos": ""
         },
         {
             "chance": "31-31",
             "nome": "Discrição",
             "livro": "Heróis de Arton",
-            "pagina": "253"
+            "pagina": "253",
+            "espacos": ""
         },
         {
             "chance": "32-32",
             "nome": "Farejar Fortuna",
             "livro": "Heróis de Arton",
-            "pagina": "254"
+            "pagina": "254",
+            "espacos": ""
         },
         {
             "chance": "33-33",
             "nome": "Maaais Klunc",
             "livro": "Heróis de Arton",
-            "pagina": "254"
+            "pagina": "254",
+            "espacos": ""
         },
         {
             "chance": "34-34",
             "nome": "Ossos de Adamante",
             "livro": "Heróis de Arton",
-            "pagina": "254"
+            "pagina": "254",
+            "espacos": ""
         },
         {
             "chance": "35-35",
             "nome": "Punho de Mitral",
             "livro": "Heróis de Arton",
-            "pagina": "254"
+            "pagina": "254",
+            "espacos": ""
         },
         {
             "chance": "36-36",
             "nome": "Magia Dadivosa",
             "livro": "Deuses de Arton",
-            "pagina": "62"
+            "pagina": "62",
+            "espacos": ""
         },
         {
             "chance": "37-37",
             "nome": "Sigilo de Sszzaas",
             "livro": "Deuses de Arton",
-            "pagina": "64"
+            "pagina": "64",
+            "espacos": ""
         },
         {
             "chance": "38-38",
             "nome": "Sorriso da Fortuna",
             "livro": "Deuses de Arton",
-            "pagina": "64"
+            "pagina": "64",
+            "espacos": ""
         },
         {
             "chance": "39-39",
             "nome": "Toque de Megalokk",
             "livro": "Deuses de Arton",
-            "pagina": "65"
+            "pagina": "65",
+            "espacos": ""
         },
         {
             "chance": "40-40",
             "nome": "Voz da Razão",
             "livro": "Deuses de Arton",
-            "pagina": "65"
+            "pagina": "65",
+            "espacos": ""
         },
         {
             "chance": "41-42",
             "nome": "Escudo da Fé (aprimoramento para duração cena)",
             "livro": "Tormenta20",
-            "pagina": "192"
+            "pagina": "192",
+            "espacos": ""
         },
         {
             "chance": "43-44",
             "nome": "Alterar Tamanho",
             "livro": "Tormenta20",
-            "pagina": "179"
+            "pagina": "179",
+            "espacos": ""
         },
         {
             "chance": "45-45",
             "nome": "Aparência Perfeita",
             "livro": "Tormenta20",
-            "pagina": "180"
+            "pagina": "180",
+            "espacos": ""
         },
         {
             "chance": "46-46",
             "nome": "Armamento da Natureza (óleo)",
             "livro": "Tormenta20",
-            "pagina": "181"
+            "pagina": "181",
+            "espacos": ""
         },
         {
             "chance": "47-50",
             "nome": "Bola de Fogo (granada)",
             "livro": "Tormenta20",
-            "pagina": "182"
+            "pagina": "182",
+            "espacos": ""
         },
         {
             "chance": "51-51",
             "nome": "Camuflagem Ilusória",
             "livro": "Tormenta20",
-            "pagina": "183"
+            "pagina": "183",
+            "espacos": ""
         },
         {
             "chance": "52-52",
             "nome": "Concentração de Combate (aprimoramento para duração cena)",
             "livro": "Tormenta20",
-            "pagina": "185"
+            "pagina": "185",
+            "espacos": ""
         },
         {
             "chance": "53-56",
             "nome": "Curar Ferimentos (4d8+4 PV)",
             "livro": "Tormenta20",
-            "pagina": "189"
+            "pagina": "189",
+            "espacos": ""
         },
         {
             "chance": "57-58",
             "nome": "Físico Divino",
             "livro": "Tormenta20",
-            "pagina": "193"
+            "pagina": "193",
+            "espacos": ""
         },
         {
             "chance": "59-59",
             "nome": "Mente Divina",
             "livro": "Tormenta20",
-            "pagina": "198"
+            "pagina": "198",
+            "espacos": ""
         },
         {
             "chance": "60-60",
             "nome": "Metamorfose",
             "livro": "Tormenta20",
-            "pagina": "198"
+            "pagina": "198",
+            "espacos": ""
         },
         {
             "chance": "61-64",
             "nome": "Purificação",
             "livro": "Tormenta20",
-            "pagina": "202"
+            "pagina": "202",
+            "espacos": ""
         },
         {
             "chance": "65-66",
             "nome": "Velocidade",
             "livro": "Tormenta20",
-            "pagina": "210"
+            "pagina": "210",
+            "espacos": ""
         },
         {
             "chance": "67-68",
             "nome": "Vestimenta da Fé (óleo)",
             "livro": "Tormenta20",
-            "pagina": "210"
+            "pagina": "210",
+            "espacos": ""
         },
         {
             "chance": "69-69",
             "nome": "Voz Divina",
             "livro": "Tormenta20",
-            "pagina": "211"
+            "pagina": "211",
+            "espacos": ""
         },
         {
             "chance": "70-71",
             "nome": "Orientação (aprimoramento para duração cena; role o atributo afetado, sendo 1 = Força, 2 = Destreza e assim por diante)",
             "livro": "Tormenta20",
-            "pagina": "200"
+            "pagina": "200",
+            "espacos": ""
         },
         {
             "chance": "72-72",
             "nome": "Aura de Morte",
             "livro": "Heróis de Arton",
-            "pagina": "252"
+            "pagina": "252",
+            "espacos": ""
         },
         {
             "chance": "73-73",
             "nome": "Emular Magia",
             "livro": "Heróis de Arton",
-            "pagina": "253"
+            "pagina": "253",
+            "espacos": ""
         },
         {
             "chance": "74-74",
             "nome": "Punho de Mitral (aprimoramento para +2 em testes de ataque e margem de ameaça)",
             "livro": "Heróis de Arton",
-            "pagina": "255"
+            "pagina": "255",
+            "espacos": ""
         },
         {
             "chance": "75-75",
             "nome": "Viagem Onírica",
             "livro": "Heróis de Arton",
-            "pagina": "255"
+            "pagina": "255",
+            "espacos": ""
         },
         {
             "chance": "76-76",
             "nome": "Couraça de Allihanna (óleo)",
             "livro": "Deuses de Arton",
-            "pagina": "60"
+            "pagina": "60",
+            "espacos": ""
         },
         {
             "chance": "77-77",
             "nome": "Toque de Megalokk (aprimoramento para aumentar o dano das armas naturais em um passo e a margem de ameaça delas em +1 )",
             "livro": "Deuses de Arton",
-            "pagina": "65"
+            "pagina": "65",
+            "espacos": ""
         },
         {
             "chance": "78-79",
             "nome": "Arma Mágica (óleo; aprimoramento para bônus +3)",
             "livro": "Tormenta20",
-            "pagina": "181"
+            "pagina": "181",
+            "espacos": ""
         },
         {
             "chance": "80-81",
             "nome": "Proteção Divina (aprimoramento para bônus de +4)",
             "livro": "Tormenta20",
-            "pagina": "202"
+            "pagina": "202",
+            "espacos": ""
         },
         {
             "chance": "82-82",
             "nome": "Armadura Elemental (aprimoramento para 4d6 pontos de dano)",
             "livro": "Heróis de Arton",
-            "pagina": "252"
+            "pagina": "252",
+            "espacos": ""
         },
         {
             "chance": "83-88",
             "nome": "Curar Ferimentos (7d8+7 PV)",
             "livro": "Tormenta20",
-            "pagina": "189"
+            "pagina": "189",
+            "espacos": ""
         },
         {
             "chance": "89-90",
             "nome": "Físico Divino (aprimoramento para três atributos)",
             "livro": "Tormenta20",
-            "pagina": "193"
+            "pagina": "193",
+            "espacos": ""
         },
         {
             "chance": "91-92",
             "nome": "Invisibilidade (aprimoramento para duração cena)",
             "livro": "Tormenta20",
-            "pagina": "195"
+            "pagina": "195",
+            "espacos": ""
         },
         {
             "chance": "93-94",
             "nome": "Pele de Pedra",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "95-95",
             "nome": "Potência Divina",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "96-96",
             "nome": "Voo",
             "livro": "Tormenta20",
-            "pagina": "211"
+            "pagina": "211",
+            "espacos": ""
         },
         {
             "chance": "97-97",
             "nome": "Percepção Rubra (aprimoramento para aumentar bônus em +3)",
             "livro": "Deuses de Arton",
-            "pagina": "63"
+            "pagina": "63",
+            "espacos": ""
         },
         {
             "chance": "98-100",
             "nome": "Bola de Fogo (granada; aprimoramento para 10d6 de dano)",
             "livro": "Tormenta20",
-            "pagina": "182"
+            "pagina": "182",
+            "espacos": ""
         },
         {
             "chance": "101-110",
             "nome": "Curar Ferimentos (11d8+11 PV)",
             "livro": "Tormenta20",
-            "pagina": "189"
+            "pagina": "189",
+            "espacos": ""
         },
         {
             "chance": "111-114",
             "nome": "Pele de Pedra (aprimoramento para pele de aço e RD 10)",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "115-116",
             "nome": "Premonição",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "117-117",
             "nome": "Viagem Onírica (aprimoramentos para falar e lançar magias)",
             "livro": "Heróis de Arton",
-            "pagina": "255"
+            "pagina": "255",
+            "espacos": ""
         },
         {
             "chance": "118-118",
             "nome": "Potência Divina (aprimoramento para Força +6 e RD 15)",
             "livro": "Tormenta20",
-            "pagina": "201"
+            "pagina": "201",
+            "espacos": ""
         },
         {
             "chance": "119-119",
             "nome": "Momento de Tormenta (granada; aprimoramento para +4 dados de dano do mesmo tipo)",
             "livro": "Ameaças de Arton",
-            "pagina": "404"
+            "pagina": "404",
+            "espacos": ""
         },
         {
             "chance": "120-120",
             "nome": "Transformação em Dragão (aprimoramentos para atributos +4, asas, arma de mordida e dano de sopro de 12d6+12)",
             "livro": "Ameaças de Arton",
-            "pagina": "405"
+            "pagina": "405",
+            "espacos": ""
         }
     ],
-    "riquezas": [],
+    "riquezas": {
+        "menor": [
+            {
+                "chance": "01-25",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d4 (10)]</span> 0,5 espaço: ágata trincada, anel de hematita, bule de chá com gravações em prata, 1d4+1 soldadinhos de chumbo do Exército do Reinado, jarro de mel, prato de bronze, tapeçaria simples sem moldura, tinta de tecido suficiente para uma roupa;\n1 espaço: caixa com velas aromáticas, estandarte em algodão de um nobre menor, kobold de pelúcia em tamanho natural, roldana de ferro;\n2 espaços: barrilete de óleo cru, espantalho imitando um hynne nobre, rolo de algodão tecido, tela para pintura;\n5 espaços: barril de farinha ou gaiola com galinhas.",
+                "espacos": ""
+            },
+            {
+                "chance": "26-40",
+                "nome": "<span style='color:#fbc02d;'>[T$ 1d4x10 (25)]</span> 0,5 espaço: colar de presas de bulette, livreto de poesia bucaneira, quartzo rosa, topázio;\n1 espaço: ânfora de prata com símbolo de Marah (vale o dobro em um templo da deusa), caixa de tabaco, rolo de linho, urna de sais aromáticos (pode ser usada como ingrediente para preparados), saco com penas de hipossauro;\n2 espaços: conjunto de talheres de prata, jarro de especiarias, como canela, gorad, pimenta ou sal;\n5 espaços: candelabro de bronze, colchão de palha de boa qualidade;\n—: vaca leiteira (irá acompanhá-lo se você for treinado em Adestramento)",
+                "espacos": ""
+            },
+            {
+                "chance": "41-55",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d4x10 (50)]</span> 0,5 espaço: ampulheta, arreios de prata, barra de gorad, bracelete de ouro finamente trabalhado, cadeado de latão de boa qualidade, leque de bambu e seda, garrafa com água das profundezas do Mar Negro (supostamente possui propriedades mágicas);\n1 espaço: bengala de ébano com uma cabeça de serpente de marfim, estatueta de osso entalhado, frutas exóticas (estragam em 2d4 dias), lamparina de ouro (vale o dobro para um devoto de Azgher), livro de crônicas roramarianas, livro de receitas campeiras de Namalkah, molde para fabricar velas, rolo de seda\n2 espaço: brazeiro de latão decorado, cobertor para montaria, couro curtido de um burafonte, vaso de prata.",
+                "espacos": ""
+            },
+            {
+                "chance": "56-70",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d6x10 (140)]</span> 0,5 espaço: ametista, cartas de um nobre falecido (seus descendentes podem pagar o dobro), frasco de tinta allavir, pente de madeira Tollon, pérola branca, suspensórios elegantes;\n1 espaço: caixa com 5 pares de meias de seda, cálice de prata com gemas de lápis-lazúli, estojo com sinete e apetrechos burocráticos (vale o dobro para o proprietário original), lingote de prata, sapatilha élfica confortável, tiara sinuosa própria para uma medusa, traje de festa exclusivo (concede +2 em Diplomacia durante a primeira cena em que for usado);\n2 espaços: alvo para disparos sofisticado (treinar nele fornece +1 em Pontaria até o fim da aventura, mas o destrói), bloco de gelo das Uivantes (derrete em 1d6+3 dias), estatueta de uma cocatriz com olhos de madrepérola;\n5 espaços: tapeçaria grande e bem-feita de lã;\n20 espaços: porta de madeira maciça finamente entalhada.",
+                "espacos": ""
+            },
+            {
+                "chance": "71-85",
+                "nome": "<span style='color:#fbc02d;'>[T$ 1d6x100 (350)]</span> 0,5 espaço: alexandrita, pérola negra, peruca de crina de pégaso;\n1 espaço: caleidoscópio de bronze com imagens doheritas, espada cerimonial ornada com prata e gema negra no cabo, toga tapistana com barra bordada em ouro, pente de prata com pedras preciosas, roda de queijo de seiva de galhada (rende 12 fatias; cada uma recupera 1d4+1 PV), sapatos de dança em couro de serpe;\n2 espaços: relógio de parede kliren;\n5 espaços: cadeira de madeira Tollon, cavalo de balanço com crina de verdade;\n10 espaços: conjunto de velas de um galeão;\n—: carruagem (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "86-95",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d6x100 (700)]</span> 0,5 espaço: baralho de Wyrt com tinta de ouro, bracelete banhado em adamante, condecoração militar da Guerra Artoniana;\n1 espaço: escultura de vidro feito com areia de Halak-Tur, estatueta de Valkaria em prata azulada, pente em forma de dragão com olhos de gema vermelha, máscara teatral de marfim com pedras preciosas, réplica do machado Zakharin (portá-lo é crime no Reinado), vestido digno de uma princesa;\n2 espaços: telescópio portátil;\n5 espaços: barril de cerveja fina de Doherimm, harpa de madeira exótica com ornamentos de zircão e marfim;\n10 espaços: tronco de madeira Tollon.",
+                "espacos": ""
+            },
+            {
+                "chance": "96-99",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d8x100 (900)]</span> 0,5 espaço: brinco com uma joia de aço-rubi, opala negra, tapa-olho com um olho falso de safira;\n1 espaço: luva bordada e adornada com gemas, pingente de opala vermelha com corrente de ouro;\n2 espaços: gaiola de prata para falcoaria, lingote de ouro, pintura antiga;\n5 espaços: barril de especiarias de Moreania;\n—: carroça cheia de mercadorias comuns (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "100-100",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d10x100 (2.200)]</span> 0,5 espaço: esmeralda verde, pingente de safira;\n1 espaço: caixinha de música de ouro, ovo de grifo (com tempo e cuidado, pode ser transformado em um parceiro grifo iniciante), tornozeleira com gemas;\n2 espaços: manto bordado em veludo e seda com inúmeras pedras preciosas;\n5 espaços: berço de madeira Tollon com detalhes em ouro, chafariz de mármore para fonte de jardim, conjunto de taças de cristal em caixote;\n20 espaços: coluna de mármore em estilo neogórdio.",
+                "espacos": ""
+            }
+        ],
+        "media": [
+            {
+                "chance": "01-10",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d4x10 (50)]</span> 0,5 espaço: ampulheta, arreios de prata, barra de gorad, bracelete de ouro finamente trabalhado, cadeado de latão de boa qualidade, leque de bambu e seda, garrafa com água das profundezas do Mar Negro (supostamente possui propriedades mágicas);\n1 espaço: bengala de ébano com uma cabeça de serpente de marfim, estatueta de osso entalhado, frutas exóticas (estragam em 2d4 dias), lamparina de ouro (vale o dobro para um devoto de Azgher), livro de crônicas roramarianas, livro de receitas campeiras de Namalkah, molde para fabricar velas, rolo de seda\n2 espaço: brazeiro de latão decorado, cobertor para montaria, couro curtido de um burafonte, vaso de prata.",
+                "espacos": ""
+            },
+            {
+                "chance": "11-30",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d6x10 (140)]</span> 0,5 espaço: ametista, cartas de um nobre falecido (seus descendentes podem pagar o dobro), frasco de tinta allavir, pente de madeira Tollon, pérola branca, suspensórios elegantes;\n1 espaço: caixa com 5 pares de meias de seda, cálice de prata com gemas de lápis-lazúli, estojo com sinete e apetrechos burocráticos (vale o dobro para o proprietário original), lingote de prata, sapatilha élfica confortável, tiara sinuosa própria para uma medusa, traje de festa exclusivo (concede +2 em Diplomacia durante a primeira cena em que for usado);\n2 espaços: alvo para disparos sofisticado (treinar nele fornece +1 em Pontaria até o fim da aventura, mas o destrói), bloco de gelo das Uivantes (derrete em 1d6+3 dias), estatueta de uma cocatriz com olhos de madrepérola;\n5 espaços: tapeçaria grande e bem-feita de lã;\n20 espaços: porta de madeira maciça finamente entalhada.",
+                "espacos": ""
+            },
+            {
+                "chance": "31-50",
+                "nome": "<span style='color:#fbc02d;'>[T$ 1d6x100 (350)]</span> 0,5 espaço: alexandrita, pérola negra, peruca de crina de pégaso;\n1 espaço: caleidoscópio de bronze com imagens doheritas, espada cerimonial ornada com prata e gema negra no cabo, toga tapistana com barra bordada em ouro, pente de prata com pedras preciosas, roda de queijo de seiva de galhada (rende 12 fatias; cada uma recupera 1d4+1 PV), sapatos de dança em couro de serpe;\n2 espaços: relógio de parede kliren;\n5 espaços: cadeira de madeira Tollon, cavalo de balanço com crina de verdade;\n10 espaços: conjunto de velas de um galeão;\n—: carruagem (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "51-65",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d6x100 (700)]</span> 0,5 espaço: baralho de Wyrt com tinta de ouro, bracelete banhado em adamante, condecoração militar da Guerra Artoniana;\n1 espaço: escultura de vidro feito com areia de Halak-Tur, estatueta de Valkaria em prata azulada, pente em forma de dragão com olhos de gema vermelha, máscara teatral de marfim com pedras preciosas, réplica do machado Zakharin (portá-lo é crime no Reinado), vestido digno de uma princesa;\n2 espaços: telescópio portátil;\n5 espaços: barril de cerveja fina de Doherimm, harpa de madeira exótica com ornamentos de zircão e marfim;\n10 espaços: tronco de madeira Tollon.",
+                "espacos": ""
+            },
+            {
+                "chance": "66-80",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d8x100 (900)]</span> 0,5 espaço: brinco com uma joia de aço-rubi, opala negra, tapa-olho com um olho falso de safira;\n1 espaço: luva bordada e adornada com gemas, pingente de opala vermelha com corrente de ouro;\n2 espaços: gaiola de prata para falcoaria, lingote de ouro, pintura antiga;\n5 espaços: barril de especiarias de Moreania;\n—: carroça cheia de mercadorias comuns (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "81-90",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d10x100 (2.200)]</span> 0,5 espaço: esmeralda verde, pingente de safira;\n1 espaço: caixinha de música de ouro, ovo de grifo (com tempo e cuidado, pode ser transformado em um parceiro grifo iniciante), tornozeleira com gemas;\n2 espaços: manto bordado em veludo e seda com inúmeras pedras preciosas;\n5 espaços: berço de madeira Tollon com detalhes em ouro, chafariz de mármore para fonte de jardim, conjunto de taças de cristal em caixote;\n20 espaços: coluna de mármore em estilo neogórdio.",
+                "espacos": ""
+            },
+            {
+                "chance": "91-95",
+                "nome": "<span style='color:#fbc02d;'>[T$ 6d12x100 (3.900)]</span> 0,5 espaços: anel de prata e safira, correntinha com pequenas pérolas rosas, diamante branco, pingente de ouro com um topázio em forma de Marah;\n1 espaço: espelho feito na Pondsmânia (adiciona traços feéricos ao reflexo do usuário);\n2 espaços: miniatura mecânica de um dragão feita por um inventor renomado, tábua de granito com reprodução da Tarvica em letras de ouro, vestido digno de uma rainha;\n5 espaços: ídolo de ouro puro maciço, quadro élfico em estilo sobrenaturalista;\n100 espaços: bloco de mármore bruto.",
+                "espacos": ""
+            },
+            {
+                "chance": "96-99",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d10x1.000 (11.000)]</span> 0,5 espaço: anel de ouro e rubi, diamante vermelho;\n1 espaço: tiara de mitral cravejada de rubis;\n2 espaços: conjunto de taças de ouro decoradas com esmeraldas;\n5 espaços: busto de Tanna-Toh esculpido por um artista famoso, globo de Arton com pedras preciosas marcando os pontos de interesse conhecidos;\n10 espaços: quadro do arquimago Vectorius em tamanho natural;\n20 espaços: piano em madeira Tollon com cordas de mitral e teclas de marfim de Galrasia, estátua dourada de Klunk.",
+                "espacos": ""
+            },
+            {
+                "chance": "100-100",
+                "nome": "<span style='color:#fbc02d;'>[T$ 6d8x1.000 (27.000)]</span> 1 espaço: coroa de ouro adornada com centenas de gemas que pertenceu a um antigo monarca;\n2 espaço: baú de mitral com coleção de diamantes, tapeçaria da Tormenta em estilo grigoriano (observá-la fornece 1 PM temporário para devotos de Aharadak uma vez por dia);\n5 espaço: estatueta de gelo eterno com uma essência elemental agitada em seu interior;\n20 espaços: meteorito de adamante bruto, sino de catedral de ouro maciço.",
+                "espacos": ""
+            }
+        ],
+        "maior": [
+            {
+                "chance": "01-05",
+                "nome": "<span style='color:#fbc02d;'>[T$ 1d6x100 (350)]</span> 0,5 espaço: alexandrita, pérola negra, peruca de crina de pégaso;\n1 espaço: caleidoscópio de bronze com imagens doheritas, espada cerimonial ornada com prata e gema negra no cabo, toga tapistana com barra bordada em ouro, pente de prata com pedras preciosas, roda de queijo de seiva de galhada (rende 12 fatias; cada uma recupera 1d4+1 PV), sapatos de dança em couro de serpe;\n2 espaços: relógio de parede kliren;\n5 espaços: cadeira de madeira Tollon, cavalo de balanço com crina de verdade;\n10 espaços: conjunto de velas de um galeão;\n—: carruagem (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "06-15",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d6x100 (700)]</span> 0,5 espaço: baralho de Wyrt com tinta de ouro, bracelete banhado em adamante, condecoração militar da Guerra Artoniana;\n1 espaço: escultura de vidro feito com areia de Halak-Tur, estatueta de Valkaria em prata azulada, pente em forma de dragão com olhos de gema vermelha, máscara teatral de marfim com pedras preciosas, réplica do machado Zakharin (portá-lo é crime no Reinado), vestido digno de uma princesa;\n2 espaços: telescópio portátil;\n5 espaços: barril de cerveja fina de Doherimm, harpa de madeira exótica com ornamentos de zircão e marfim;\n10 espaços: tronco de madeira Tollon.",
+                "espacos": ""
+            },
+            {
+                "chance": "16-25",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d8x100 (900)]</span> 0,5 espaço: brinco com uma joia de aço-rubi, opala negra, tapa-olho com um olho falso de safira;\n1 espaço: luva bordada e adornada com gemas, pingente de opala vermelha com corrente de ouro;\n2 espaços: gaiola de prata para falcoaria, lingote de ouro, pintura antiga;\n5 espaços: barril de especiarias de Moreania;\n—: carroça cheia de mercadorias comuns (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "26-40",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d10x100 (2.200)]</span> 0,5 espaço: esmeralda verde, pingente de safira;\n1 espaço: caixinha de música de ouro, ovo de grifo (com tempo e cuidado, pode ser transformado em um parceiro grifo iniciante), tornozeleira com gemas;\n2 espaços: manto bordado em veludo e seda com inúmeras pedras preciosas;\n5 espaços: berço de madeira Tollon com detalhes em ouro, chafariz de mármore para fonte de jardim, conjunto de taças de cristal em caixote;\n20 espaços: coluna de mármore em estilo neogórdio.",
+                "espacos": ""
+            },
+            {
+                "chance": "41-60",
+                "nome": "<span style='color:#fbc02d;'>[T$ 6d12x100 (3.900)]</span> 0,5 espaços: anel de prata e safira, correntinha com pequenas pérolas rosas, diamante branco, pingente de ouro com um topázio em forma de Marah;\n1 espaço: espelho feito na Pondsmânia (adiciona traços feéricos ao reflexo do usuário);\n2 espaços: miniatura mecânica de um dragão feita por um inventor renomado, tábua de granito com reprodução da Tarvica em letras de ouro, vestido digno de uma rainha;\n5 espaços: ídolo de ouro puro maciço, quadro élfico em estilo sobrenaturalista;\n100 espaços: bloco de mármore bruto.",
+                "espacos": ""
+            },
+            {
+                "chance": "61-75",
+                "nome": "<span style='color:#fbc02d;'>[T$ 2d10x1.000 (11.000)]</span> 0,5 espaço: anel de ouro e rubi, diamante vermelho;\n1 espaço: tiara de mitral cravejada de rubis;\n2 espaços: conjunto de taças de ouro decoradas com esmeraldas;\n5 espaços: busto de Tanna-Toh esculpido por um artista famoso, globo de Arton com pedras preciosas marcando os pontos de interesse conhecidos;\n10 espaços: quadro do arquimago Vectorius em tamanho natural;\n20 espaços: piano em madeira Tollon com cordas de mitral e teclas de marfim de Galrasia, estátua dourada de Klunk.",
+                "espacos": ""
+            },
+            {
+                "chance": "76-85",
+                "nome": "<span style='color:#fbc02d;'>[T$ 6d8x1.000 (27.000)]</span> 1 espaço: coroa de ouro adornada com centenas de gemas que pertenceu a um antigo monarca;\n2 espaço: baú de mitral com coleção de diamantes, tapeçaria da Tormenta em estilo grigoriano (observá-la fornece 1 PM temporário para devotos de Aharadak uma vez por dia);\n5 espaço: estatueta de gelo eterno com uma essência elemental agitada em seu interior;\n20 espaços: meteorito de adamante bruto, sino de catedral de ouro maciço.",
+                "espacos": ""
+            },
+            {
+                "chance": "86-95",
+                "nome": "<span style='color:#fbc02d;'>[T$ 1d10x10.000 (55.000)]</span> 1 espaço: elmo de matéria vermelha com detalhes em rubis e turmalinas;\n10 espaços: altar religioso em granito e onix com inscrições em ouro, sarcófago de ouro cravejado de gemas;\n20 espaços: arca de madeira reforçada repleta de lingotes de prata e ouro e pedras preciosas de vários tipos;\n—: carruagem de luxo em madeira Tollon banhada a ouro com detalhes em metais finos e pedras preciosas (pode ser puxada por um animal de tração ou arrastada por um personagem como um item que ocupa 20 espaços).",
+                "espacos": ""
+            },
+            {
+                "chance": "96-100",
+                "nome": "<span style='color:#fbc02d;'>[T$ 4d12x10.000 (260.000)]</span> 20 espaços: estátua titanoteica em aventurina de uma divindade do Panteão;\n—: uma sala forrada de moedas (mover todo esse dinheiro exige trabalhadores e carroças, ou outra ideia por parte dos jogadores, além de atrair a atenção de bandidos, coletores de impostos e aproveitadores de vários tipos).",
+                "espacos": ""
+            }
+        ]
+    },
     "equipamentos": {
         "Armas": [
             {
