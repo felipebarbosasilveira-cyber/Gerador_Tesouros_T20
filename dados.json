@@ -2856,7 +2856,451 @@
                 "nome": "Arma específica",
                 "livro": "Role na tabela abaixo",
                 "pagina": "–"
+            }
+        ],
+        "Armaduras": [
+            {
+                "chance": "01-02",
+                "nome": "Abascanto",
+                "livro": "Tormenta20",
+                "pagina": "338"
             },
+            {
+                "chance": "03-04",
+                "nome": "Abençoado",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "05-05",
+                "nome": "Abissal",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "06-06",
+                "nome": "Acrobático",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "07-08",
+                "nome": "Alado",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "09-09",
+                "nome": "Ancorada*",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "10-11",
+                "nome": "Animado**",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "12-12",
+                "nome": "Anulador***",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "13-13",
+                "nome": "Arbóreo",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "14-15",
+                "nome": "Assustador",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "16-16",
+                "nome": "Astuto",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "17-17",
+                "nome": "Cáustica",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "18-27",
+                "nome": "Defensor",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "28-28",
+                "nome": "Densa*",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "29-29",
+                "nome": "Égide",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "30-30",
+                "nome": "Enraizada*",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "31-31",
+                "nome": "Escorregadio",
+                "livro": "Tormenta20",
+                "pagina": "338"
+            },
+            {
+                "chance": "32-33",
+                "nome": "Esmagador**",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "34-34",
+                "nome": "Esmérico",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "35-36",
+                "nome": "Estígio***",
+                "livro": "Heróis de Arton",
+                "pagina": "258"
+            },
+            {
+                "chance": "37-37",
+                "nome": "Etéreo",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "38-39",
+                "nome": "Fantasmagórico",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "40-43",
+                "nome": "Fortificado",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "44-44",
+                "nome": "Gélido",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "45-45",
+                "nome": "Geomântico",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "46-55",
+                "nome": "Guardião***",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "56-57",
+                "nome": "Hipnótico",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "58-58",
+                "nome": "Ilusório",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "59-59",
+                "nome": "Incandescente",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "60-64",
+                "nome": "Invulnerável",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "65-65",
+                "nome": "Ligeira*",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "66-67",
+                "nome": "Luminescente",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "68-72",
+                "nome": "Opaco",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "73-73",
+                "nome": "Prístino",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "74-78",
+                "nome": "Protetor",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "79-79",
+                "nome": "Purificador",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "80-81",
+                "nome": "Reanimador",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "82-83",
+                "nome": "Refletor",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "84-84",
+                "nome": "Relampejante",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "85-85",
+                "nome": "Reluzente",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "86-86",
+                "nome": "Replicante",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "87-87",
+                "nome": "Resiliente",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "88-88",
+                "nome": "Sombrio",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "89-89",
+                "nome": "Vórtice",
+                "livro": "Heróis de Arton",
+                "pagina": "259"
+            },
+            {
+                "chance": "90-90",
+                "nome": "Zeloso",
+                "livro": "Tormenta20",
+                "pagina": "339"
+            },
+            {
+                "chance": "91-100",
+                "nome": "Item específico",
+                "livro": "Role na tabela abaixo",
+                "pagina": "–"
+            }
+        ],
+        "Esotericos": [
+            {
+                "chance": "01-02",
+                "nome": "Abafador",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "03-12",
+                "nome": "Bélico",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "13-16",
+                "nome": "Caridoso",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "17-20",
+                "nome": "Chocante",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "21-30",
+                "nome": "Clemente",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "31-32",
+                "nome": "Contido",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "33-34",
+                "nome": "Embusteiro",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "35-36",
+                "nome": "Emergencial",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "37-40",
+                "nome": "Encadeado",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "41-42",
+                "nome": "Escultor",
+                "livro": "Heróis de Arton",
+                "pagina": "260"
+            },
+            {
+                "chance": "43-44",
+                "nome": "Frugal",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "45-48",
+                "nome": "Glacial",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "49-50",
+                "nome": "Imperioso",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "51-52",
+                "nome": "Implacável*",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "53-54",
+                "nome": "Incriminador",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "55-61",
+                "nome": "Inflamável",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "62-65",
+                "nome": "Inquisidor",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "66-69",
+                "nome": "Insistente",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "70-71",
+                "nome": "Khalmyrita",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "72-81",
+                "nome": "Majestoso*",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "82-83",
+                "nome": "Nímbico",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "84-84",
+                "nome": "Pulverizante*",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "85-85",
+                "nome": "Retaliador",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "86-87",
+                "nome": "Sanguessuga",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "88-88",
+                "nome": "Traiçoeiro",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "89-90",
+                "nome": "Verdugo",
+                "livro": "Heróis de Arton",
+                "pagina": "261"
+            },
+            {
+                "chance": "91-100",
+                "nome": "Esotérico específico",
+                "livro": "Role na tabela abaixo",
+                "pagina": "–"
+            }
+        ],
+        "Armas_Esp": [
             {
                 "chance": "01-02",
                 "nome": "Adaga da bruma",
@@ -3152,283 +3596,7 @@
                 "pagina": "338"
             }
         ],
-        "Armaduras": [
-            {
-                "chance": "01-02",
-                "nome": "Abascanto",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "03-04",
-                "nome": "Abençoado",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "05-05",
-                "nome": "Abissal",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "06-06",
-                "nome": "Acrobático",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "07-08",
-                "nome": "Alado",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "09-09",
-                "nome": "Ancorada*",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "10-11",
-                "nome": "Animado**",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "12-12",
-                "nome": "Anulador***",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "13-13",
-                "nome": "Arbóreo",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "14-15",
-                "nome": "Assustador",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "16-16",
-                "nome": "Astuto",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "17-17",
-                "nome": "Cáustica",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "18-27",
-                "nome": "Defensor",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "28-28",
-                "nome": "Densa*",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "29-29",
-                "nome": "Égide",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "30-30",
-                "nome": "Enraizada*",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "31-31",
-                "nome": "Escorregadio",
-                "livro": "Tormenta20",
-                "pagina": "338"
-            },
-            {
-                "chance": "32-33",
-                "nome": "Esmagador**",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "34-34",
-                "nome": "Esmérico",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "35-36",
-                "nome": "Estígio***",
-                "livro": "Heróis de Arton",
-                "pagina": "258"
-            },
-            {
-                "chance": "37-37",
-                "nome": "Etéreo",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "38-39",
-                "nome": "Fantasmagórico",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "40-43",
-                "nome": "Fortificado",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "44-44",
-                "nome": "Gélido",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "45-45",
-                "nome": "Geomântico",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "46-55",
-                "nome": "Guardião***",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "56-57",
-                "nome": "Hipnótico",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "58-58",
-                "nome": "Ilusório",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "59-59",
-                "nome": "Incandescente",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "60-64",
-                "nome": "Invulnerável",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "65-65",
-                "nome": "Ligeira*",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "66-67",
-                "nome": "Luminescente",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "68-72",
-                "nome": "Opaco",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "73-73",
-                "nome": "Prístino",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "74-78",
-                "nome": "Protetor",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "79-79",
-                "nome": "Purificador",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "80-81",
-                "nome": "Reanimador",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "82-83",
-                "nome": "Refletor",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "84-84",
-                "nome": "Relampejante",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "85-85",
-                "nome": "Reluzente",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "86-86",
-                "nome": "Replicante",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "87-87",
-                "nome": "Resiliente",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "88-88",
-                "nome": "Sombrio",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "89-89",
-                "nome": "Vórtice",
-                "livro": "Heróis de Arton",
-                "pagina": "259"
-            },
-            {
-                "chance": "90-90",
-                "nome": "Zeloso",
-                "livro": "Tormenta20",
-                "pagina": "339"
-            },
-            {
-                "chance": "91-100",
-                "nome": "Item específico",
-                "livro": "Role na tabela abaixo",
-                "pagina": "–"
-            },
+        "Armaduras_Esp": [
             {
                 "chance": "01-04",
                 "nome": "Armadura da luz",
@@ -3574,169 +3742,7 @@
                 "pagina": "340"
             }
         ],
-        "Esotericos": [
-            {
-                "chance": "01-02",
-                "nome": "Abafador",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "03-12",
-                "nome": "Bélico",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "13-16",
-                "nome": "Caridoso",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "17-20",
-                "nome": "Chocante",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "21-30",
-                "nome": "Clemente",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "31-32",
-                "nome": "Contido",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "33-34",
-                "nome": "Embusteiro",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "35-36",
-                "nome": "Emergencial",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "37-40",
-                "nome": "Encadeado",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "41-42",
-                "nome": "Escultor",
-                "livro": "Heróis de Arton",
-                "pagina": "260"
-            },
-            {
-                "chance": "43-44",
-                "nome": "Frugal",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "45-48",
-                "nome": "Glacial",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "49-50",
-                "nome": "Imperioso",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "51-52",
-                "nome": "Implacável*",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "53-54",
-                "nome": "Incriminador",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "55-61",
-                "nome": "Inflamável",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "62-65",
-                "nome": "Inquisidor",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "66-69",
-                "nome": "Insistente",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "70-71",
-                "nome": "Khalmyrita",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "72-81",
-                "nome": "Majestoso*",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "82-83",
-                "nome": "Nímbico",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "84-84",
-                "nome": "Pulverizante*",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "85-85",
-                "nome": "Retaliador",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "86-87",
-                "nome": "Sanguessuga",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "88-88",
-                "nome": "Traiçoeiro",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "89-90",
-                "nome": "Verdugo",
-                "livro": "Heróis de Arton",
-                "pagina": "261"
-            },
-            {
-                "chance": "91-100",
-                "nome": "Esotérico específico",
-                "livro": "Role na tabela abaixo",
-                "pagina": "–"
-            },
+        "Esotericos_Esp": [
             {
                 "chance": "01-20",
                 "nome": "Cajado da destruição",

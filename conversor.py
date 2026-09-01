@@ -64,6 +64,42 @@ def extrair_acessorios():
             tabela['Maior'].append({"chance": c_mai, "nome": str(row.iloc[13]), "livro": str(row.iloc[15]) if pd.notna(row.iloc[15]) else "", "pagina": str(row.iloc[16]) if pd.notna(row.iloc[16]) else ""})
     return tabela
 
+def extrair_magicos():
+    df = pd.read_excel(xls, sheet_name='Mágicos')
+    tabela = {"Armas": [], "Armaduras": [], "Esotericos": [], "Armas_Esp": [], "Armaduras_Esp": [], "Esotericos_Esp": []}
+    
+    modo_arma = "Armas"
+    modo_armad = "Armaduras"
+    modo_esot = "Esotericos"
+    
+    for index, row in df.iterrows():
+        # Verifica as colunas procurando pelos cabeçalhos pretos no PLURAL que dividem as tabelas
+        str_arma = str(row.iloc[0]).upper() + " " + str(row.iloc[1]).upper()
+        if "ESPECÍFICAS" in str_arma or "ESPECÍFICOS" in str_arma: modo_arma = "Armas_Esp"
+        
+        str_armad = str(row.iloc[5]).upper() + " " + str(row.iloc[6]).upper()
+        if "ESPECÍFICAS" in str_armad or "ESPECÍFICOS" in str_armad: modo_armad = "Armaduras_Esp"
+        
+        str_esot = str(row.iloc[10]).upper() + " " + str(row.iloc[11]).upper()
+        if "ESPECÍFICAS" in str_esot or "ESPECÍFICOS" in str_esot: modo_esot = "Esotericos_Esp"
+
+        # Armas
+        c_arma = arrumar_chance(row.iloc[0])
+        if c_arma and pd.notna(row.iloc[1]) and str(row.iloc[1]).lower() != "encanto":
+            tabela[modo_arma].append({"chance": c_arma, "nome": str(row.iloc[1]), "livro": str(row.iloc[2]) if pd.notna(row.iloc[2]) else "", "pagina": str(row.iloc[3]) if pd.notna(row.iloc[3]) else ""})
+            
+        # Armaduras
+        c_armad = arrumar_chance(row.iloc[5])
+        if c_armad and pd.notna(row.iloc[6]) and str(row.iloc[6]).lower() != "encanto":
+            tabela[modo_armad].append({"chance": c_armad, "nome": str(row.iloc[6]), "livro": str(row.iloc[7]) if pd.notna(row.iloc[7]) else "", "pagina": str(row.iloc[8]) if pd.notna(row.iloc[8]) else ""})
+            
+        # Esotéricos
+        c_esot = arrumar_chance(row.iloc[10])
+        if c_esot and pd.notna(row.iloc[11]) and str(row.iloc[11]).lower() != "encanto":
+            tabela[modo_esot].append({"chance": c_esot, "nome": str(row.iloc[11]), "livro": str(row.iloc[12]) if pd.notna(row.iloc[12]) else "", "pagina": str(row.iloc[13]) if pd.notna(row.iloc[13]) else ""})
+            
+    return tabela
+
 # 1. Tesouro por ND
 df_nd = pd.read_excel(xls, sheet_name='Tesouro por ND')
 df_nd['ND'] = df_nd['ND'].ffill()
@@ -89,7 +125,7 @@ bd['pocoes'] = extrair_tabela('Poções', 'Poção')
 bd['riquezas'] = extrair_tabela('Riquezas', 'Riqueza')
 bd['equipamentos'] = extrair_multi_tabela('Equipamentos')
 bd['superiores'] = extrair_multi_tabela('Superiores')
-bd['magicos'] = extrair_multi_tabela('Mágicos')
+bd['magicos'] = extrair_magicos()
 bd['acessorios'] = extrair_acessorios()
 
 with open('dados.json', 'w', encoding='utf-8') as f:
