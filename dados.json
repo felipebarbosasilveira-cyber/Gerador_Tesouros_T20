@@ -29,28 +29,28 @@
             "itens": "—"
         },
         {
-            "nd": "1/4",
+            "nd": "1/2",
             "chance_dinheiro": "01-25",
             "dinheiro": "—",
             "chance_itens": "01-45",
             "itens": "—"
         },
         {
-            "nd": "1/4",
+            "nd": "1/2",
             "chance_dinheiro": "26-70",
             "dinheiro": "2d6x10 TC",
             "chance_itens": "46-70",
             "itens": "Item diverso"
         },
         {
-            "nd": "1/4",
+            "nd": "1/2",
             "chance_dinheiro": "71-95",
             "dinheiro": "2d8x10 T$",
             "chance_itens": "71-100",
             "itens": "Equipamento"
         },
         {
-            "nd": "1/4",
+            "nd": "1/2",
             "chance_dinheiro": "96-100",
             "dinheiro": "1d4x100 T$",
             "chance_itens": null,

@@ -108,9 +108,17 @@ def extrair_magicos():
 df_nd = pd.read_excel(xls, sheet_name='Tesouro por ND')
 df_nd['ND'] = df_nd['ND'].ffill()
 def arrumar_nd(v):
-    if isinstance(v, pd.Timestamp) or isinstance(v, datetime) or str(v).startswith('2025-04'): return '1/4'
-    if isinstance(v, pd.Timestamp) or isinstance(v, datetime) or str(v).startswith('2025-02'): return '1/2'
-    return str(v).replace('.0', '')
+    # Se o Excel converteu a fração para uma data
+    if isinstance(v, pd.Timestamp) or hasattr(v, 'month'):
+        if v.month == 4 or v.day == 4: return '1/4'
+        if v.month == 2 or v.day == 2: return '1/2'
+        
+    v_str = str(v).strip()
+    # Se ele leu como um texto de data ou número decimal
+    if '-04' in v_str or v_str == '0.25': return '1/4'
+    if '-02' in v_str or v_str == '0.5': return '1/2'
+    
+    return v_str.replace('.0', '')
 df_nd['ND'] = df_nd['ND'].apply(arrumar_nd)
 
 bd['tesouro_nd'] = []
