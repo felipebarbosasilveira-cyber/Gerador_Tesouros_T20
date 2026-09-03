@@ -285,14 +285,19 @@ function gerarTesouro() {
             if (querItens && checa(l.chance_itens, dItens)) txtI = l.itens;
         }
 
+        // --- PADRONIZAÇÃO AQUI ---
+        // Pega qualquer variação de traço do livro e converte para "Nenhum"
+        if (txtD === "—" || txtD === "–" || txtD === "-" || txtD.trim() === "") txtD = "Nenhum";
+        if (txtI === "—" || txtI === "–" || txtI === "-" || txtI.trim() === "") txtI = "Nenhum";
+
         let itemResolvido = "Não rolado";
         if (querItens) {
-            itemResolvido = txtI !== "—" ? resolverFinal(txtI) : "Nenhum";
+            itemResolvido = txtI !== "Nenhum" ? resolverFinal(txtI) : "Nenhum";
         }
         
         let dinhResolvido = querDinh ? txtD : "Não rolado";
         
-        if (querDinh) {
+        if (querDinh && txtD !== "Nenhum") {
             let txtDLower = txtD.toLowerCase();
 
             if (txtDLower.includes("riqueza") || txtDLower.includes("poção") || txtDLower.includes("poções")) {
@@ -318,52 +323,50 @@ function gerarTesouro() {
                     let rFinal = hasBonus ? Math.min(100, r + 20) : r; 
                     let bonusTxt = hasBonus ? ` (+20)` : ``;
                     
-                if (isRiqueza) {
-                    let cat = "menor";
-                    if (txtDLower.includes("média") || txtDLower.includes("media")) cat = "media";
-                    if (txtDLower.includes("maior") || txtDLower.includes("maiores")) cat = "maior";
-                    
-                    let item = buscarItem(bd.riquezas[cat], rFinal);
-                    let espacoObj = rolarEspacoRiqueza();
-                    
-                    let tagPreco = "";
-                    let textoFull = item.nome;
-                    
-                    let matchPreco = textoFull.match(/^(<span.*?>.*?<\/span>)\s*([\s\S]*)/i);
-                    if (matchPreco) {
-                        tagPreco = matchPreco[1] + " ";
-                        textoFull = matchPreco[2];
-                    }
-                    
-                    let blocos = textoFull.split(/;(?=\s*(?:[\d,]+|—)(?:\s*espaço|:))/i);
-                    let textoFiltrado = null;
-                    
-                    for (let b of blocos) {
-                        let linha = b.replace(/\n/g, " ").trim();
-                        let regexPeso = new RegExp("^" + espacoObj.valor.replace(',', '\\,?') + "\\s*espaço", "i");
-                        if (regexPeso.test(linha)) {
-                            textoFiltrado = "Exemplo: " + linha.replace(/^.*?:/, "").trim();
-                            break;
+                    if (isRiqueza) {
+                        let cat = "menor";
+                        if (txtDLower.includes("média") || txtDLower.includes("media")) cat = "media";
+                        if (txtDLower.includes("maior") || txtDLower.includes("maiores")) cat = "maior";
+                        
+                        let item = buscarItem(bd.riquezas[cat], rFinal);
+                        let espacoObj = rolarEspacoRiqueza();
+                        
+                        let tagPreco = "";
+                        let textoFull = item.nome;
+                        
+                        let matchPreco = textoFull.match(/^(<span.*?>.*?<\/span>)\s*([\s\S]*)/i);
+                        if (matchPreco) {
+                            tagPreco = matchPreco[1] + " ";
+                            textoFull = matchPreco[2];
                         }
+                        
+                        let blocos = textoFull.split(/;(?=\s*(?:[\d,]+|—)(?:\s*espaço|:))/i);
+                        let textoFiltrado = null;
+                        
+                        for (let b of blocos) {
+                            let linha = b.replace(/\n/g, " ").trim();
+                            let regexPeso = new RegExp("^" + espacoObj.valor.replace(',', '\\,?') + "\\s*espaço", "i");
+                            if (regexPeso.test(linha)) {
+                                textoFiltrado = "Exemplo: " + linha.replace(/^.*?:/, "").trim();
+                                break;
+                            }
+                        }
+                        
+                        if (!textoFiltrado) {
+                            textoFiltrado = ""; 
+                        }
+                        
+                        let itemDisplay = {...item, nome: tagPreco + textoFiltrado};
+                        
+                        let temExemplo = textoFiltrado.includes("Exemplo:");
+                        let separador = temExemplo ? `<br>` : ` `;
+                        let margemInferior = temExemplo ? `margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px dashed rgba(255,255,255,0.05);` : `margin-bottom: 4px;`;
+                        
+                        htmlAcumulado += `<div style="${margemInferior}">💎 ${formataItem(itemDisplay)}${separador}<span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span> ${espacoObj.tag}</div>`;
+                    } else {
+                        let item = buscarItem(bd.pocoes, rFinal);
+                        htmlAcumulado += `<div style="margin-bottom: 4px;">🧪 ${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span></div>`;
                     }
-                    
-                    if (!textoFiltrado) {
-                        textoFiltrado = ""; 
-                    }
-                    
-                    let itemDisplay = {...item, nome: tagPreco + textoFiltrado};
-                    
-                    // Condicional inteligente: só quebra a linha se houver texto de exemplo longo
-                    let temExemplo = textoFiltrado.includes("Exemplo:");
-                    let separador = temExemplo ? `<br>` : ` `;
-                    let margemInferior = temExemplo ? `margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px dashed rgba(255,255,255,0.05);` : `margin-bottom: 4px;`;
-                    
-                    htmlAcumulado += `<div style="${margemInferior}">💎 ${formataItem(itemDisplay)}${separador}<span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span> ${espacoObj.tag}</div>`;
-                } else {
-                    let item = buscarItem(bd.pocoes, rFinal);
-                    htmlAcumulado += `<div style="margin-bottom: 4px;">🧪 ${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r}${bonusTxt})</span></div>`;
-                }
-
                 }
                 htmlAcumulado += `</div>`;
                 dinhResolvido = `<strong>${txtD}</strong> ${htmlAcumulado}`;
@@ -373,7 +376,6 @@ function gerarTesouro() {
         const res = document.createElement("div");
         res.className = "card-resultado";
         
-        // NOVA LÓGICA DE ABAS: Abre se você marcou a caixinha, independente de ser "Nenhum"
         let abaDinhAberta = querDinh ? "open" : "";
         let abaItensAberta = querItens ? "open" : "";
         
@@ -383,7 +385,7 @@ function gerarTesouro() {
         res.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                 <span style="font-size: 16px;">ND: <strong>${nd}</strong></span>
-                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;" onclick="copiarCard(this, '${nd}', '${querDinh ? txtD : "—"}')">Copiar</button>
+                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;" onclick="copiarCard(this, '${nd}', '${querDinh ? txtD : "Não rolado"}')">Copiar</button>
             </div>
             
             <!-- ABA DE DINHEIRO -->
