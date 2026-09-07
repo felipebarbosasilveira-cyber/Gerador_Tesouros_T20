@@ -216,7 +216,17 @@ let bd = {};
         } else if (tipo.startsWith('superiores_')) {
             let sub = tipo.split('_')[1];
             let item = buscarItem(bd.superiores[sub], r);
-            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
+            
+            let htmlAdicional = "";
+            
+            // Intercepta o material especial e rola 1d6 automaticamente
+            if (item.nome.toLowerCase().includes("material especial")) {
+                let d6Mat = rolarD6();
+                let materiais = ["Aço-rubi", "Adamante", "Gelo eterno", "Madeira Tollon", "Matéria vermelha", "Mitral"];
+                htmlAdicional = `<br><span style="color: #ff9800; font-size: 13px; margin-top: 2px; display: inline-block;">↳ Material: <strong>${materiais[d6Mat-1]}</strong> <span style="color:#aaa; font-size: 11px;">(1d6: ${d6Mat})</span></span>`;
+            }
+            
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>${htmlAdicional}`;
             
         } else if (tipo.startsWith('magicos_')) {
             let sub = tipo.split('_')[1];
@@ -241,20 +251,15 @@ let bd = {};
     }
 
     window.copiarCard = function(botao, nd, txtDinh) {
-        // Puxa o card atual e a área de itens
         let card = botao.closest('.card-resultado');
         let divItens = card.querySelector('.bloco-itens');
         
-        // Clona a área de itens para não alterar a tela do site
         let clone = divItens.cloneNode(true);
-        
-        // Remove os botões de rolar do texto que vai ser copiado
         let botoes = clone.querySelectorAll('button');
         botoes.forEach(b => b.remove());
         
-        // Extrai o texto limpo, apagando o "[d% Itens: XX] ->"
-        let textoItens = clone.innerText.replace(/\[d% Itens: \d+\] -> /, '').trim();
-        textoItens = textoItens.replace(/^\s*[\r\n]/gm, ''); // Remove quebras de linha vazias
+        let textoItens = clone.innerText.trim();
+        textoItens = textoItens.replace(/^\s*[\r\n]/gm, '');
 
         let textoFinal = `💰 Tesouro (ND ${nd})\nDinheiro: ${txtDinh}\nItens:\n${textoItens}`;
         
@@ -405,7 +410,7 @@ function gerarTesouro() {
                     <span style="font-size: 16px;">⚔️ Itens</span> 
                     <span class="rolagem" style="font-size: 12px; font-weight: normal; margin-left: auto;">${txtRolItens}</span>
                 </summary>
-                <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; line-height: 1.4;">
+                <div class="bloco-itens" style="margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; line-height: 1.4;">
                     ${itemResolvido}
                 </div>
             </details>
