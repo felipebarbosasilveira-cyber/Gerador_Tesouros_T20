@@ -61,11 +61,10 @@
         Planilha original por <strong>Guilherme Dei Svaldi</strong> (Riquezas por <strong>Rafael Dei Svaldi</strong>).<br>
         <em>Tormenta é uma criação de Leonel Caldela, Marcelo Cassaro, Guilherme Dei Svaldi, Rafael Dei Svaldi e J. M. Trevisan (Jambô Editora).</em>
     </div>
-
 </div>
 
 <script>
-let bd = {};
+    let bd = {};
     fetch('dados.json?nocache=' + new Date().getTime()).then(res => res.json()).then(data => bd = data);
 
     const rolarD100 = () => Math.floor(Math.random() * 100) + 1;
@@ -85,14 +84,10 @@ let bd = {};
 
     function formataItem(obj) {
         let txt = `<strong>${obj.nome}</strong>`;
-        
-        // Adiciona a etiqueta de Espaços (se existir na tabela)
         if (obj.espacos && obj.espacos !== "" && obj.espacos !== "nan") {
             let esp = String(obj.espacos).replace('.0', '');
             txt += ` <span style="font-size:12px;color:#4db8ff;font-weight:bold;">[Espaços: ${esp}]</span>`;
         }
-        
-        // Adiciona a etiqueta de Livro/Página (se existir na tabela)
         if (obj.livro && obj.livro !== "nan" && obj.livro !== "") {
             let pag = String(obj.pagina).replace('.0', '');
             txt += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${obj.livro} p.${pag}]</span>`;
@@ -100,89 +95,196 @@ let bd = {};
         return txt;
     }
 
+    // Função atualizada: Agora ela apaga o formato amarelo após a escolha
+    window.escolher2D = function(idContainer, idOptAtivar) {
+        // Esconde os botões
+        document.getElementById('botoes_escolha_' + idContainer).style.display = 'none';
+        // Mostra a opção que o Mestre escolheu
+        document.getElementById(idOptAtivar).style.display = 'block';
+        
+        // Remove a borda pontilhada e o fundo amarelo do container
+        let box = document.getElementById('box_2d_' + idContainer);
+        if (box) {
+            box.style.background = 'transparent';
+            box.style.border = 'none';
+            box.style.padding = '0';
+            box.style.marginTop = '0';
+        }
+        
+        // Oculta o título de aviso da Regra 2D
+        let titulo = document.getElementById('titulo_2d_' + idContainer);
+        if (titulo) {
+            titulo.style.display = 'none';
+        }
+    }
+
     function resolverFinal(tipoBase) {
         if (!tipoBase || tipoBase === "—") return "Nenhum";
         let text = tipoBase.toLowerCase();
-        let r = rolarD100();
-
-        if (text.includes("diverso")) return `Item Diverso: ${formataItem(buscarItem(bd.itens_diversos, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
-        if (text.includes("poção") || text.includes("poções")) return `Poção: ${formataItem(buscarItem(bd.pocoes, r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
-        if (text.includes("riqueza")) {
-            let cat = "menor";
-            if (text.includes("média") || text.includes("media")) cat = "media";
-            if (text.includes("maior") || text.includes("maiores")) cat = "maior";
-            return `Riqueza: ${formataItem(buscarItem(bd.riquezas[cat], r))} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
-        }
         
-        if (text.includes("equipamento")) {
-            let d6 = rolarD6();
-            let sub = d6 <= 3 ? "Armas" : (d6 <= 5 ? "Armaduras" : "Esotericos");
-            return `Equipamento (${sub}): ${formataItem(buscarItem(bd.equipamentos[sub], r))} <span style="font-size:12px;color:#aaa;">(1d6: ${d6} | d%: ${r})</span>`;
-        }
+        let is2D = text.includes("2d") && !text.match(/\d+d\d+/);
         
-        if (text.includes("superior") || text.includes("mágico")) {
-            let idUnico = Math.random().toString(36).substr(2, 9);
-            let botoesHTML = `<div style="margin-top: 10px; padding-left: 10px; border-left: 2px solid #555;">`;
-            
-            let isMagico = text.includes("mágico");
-            let d6Cat = rolarD6();
-            let categoria = "";
-            let numRols = 1;
+        let matchQtd = text.match(/(\d+)d(\d+)(?:\+(\d+))?/);
+        let qtd = 1; 
+        if (matchQtd) {
+            let dados = parseInt(matchQtd[1]);
+            let faces = parseInt(matchQtd[2]);
+            let fixo = matchQtd[3] ? parseInt(matchQtd[3]) : 0;
+            qtd = fixo;
+            for(let i=0; i < dados; i++) qtd += Math.floor(Math.random() * faces) + 1;
+        }
 
-            // Passo 1: Definir Categoria por d6
-            if (isMagico) {
-                if (d6Cat <= 2) categoria = "Armas";
-                else if (d6Cat === 3) categoria = "Armaduras";
-                else if (d6Cat === 4) categoria = "Esotericos";
-                else categoria = "Acessorios";
-                
-                // Passo 2 do Mágico: Quantidade de Encantos
-                if (text.includes("menor")) numRols = 1;
-                else if (text.includes("médio") || text.includes("medio")) numRols = 2;
-                else if (text.includes("maior")) numRols = 3;
-            } else { // Superior
-                if (d6Cat <= 3) categoria = "Armas";
-                else if (d6Cat <= 5) categoria = "Armaduras";
-                else categoria = "Esotericos";
-                
-                // Superior: Quantidade pela string (ex: "3 melhorias")
-                let match = text.match(/\d+/);
-                numRols = match ? parseInt(match[0]) : 1;
-            }
+        let hasBonus = text.includes("+%"); 
+        let bonusTxt = hasBonus ? ` (+20)` : ``;
+        let resultadosHtml = [];
+        
+        for (let i = 0; i < qtd; i++) {
+            let rBase = rolarD100();
+            let r = hasBonus ? Math.min(100, rBase + 20) : rBase;
 
-            let catDisplay = categoria === "Acessorios" ? "Acessório" : (categoria === "Esotericos" ? "Esotérico" : categoria.slice(0, -1));
-            botoesHTML += `<div style="margin-bottom: 8px; color: #aaa; font-size: 13px;">Categoria sorteada (1d6 = ${d6Cat}): <strong>${catDisplay}</strong></div>`;
+            if (text.includes("diverso")) {
+                resultadosHtml.push(`Item Diverso: ${formataItem(buscarItem(bd.itens_diversos, r))} <span style="font-size:12px;color:#aaa;">(d%: ${rBase}${bonusTxt})</span>`);
+            } 
+            else if (text.includes("poção") || text.includes("poções")) {
+                resultadosHtml.push(`Poção: ${formataItem(buscarItem(bd.pocoes, r))} <span style="font-size:12px;color:#aaa;">(d%: ${rBase}${bonusTxt})</span>`);
+            } 
+            else if (text.includes("riqueza")) {
+                let cat = "menor";
+                if (text.includes("média") || text.includes("media")) cat = "media";
+                if (text.includes("maior") || text.includes("maiores")) cat = "maior";
+                resultadosHtml.push(`Riqueza: ${formataItem(buscarItem(bd.riquezas[cat], r))} <span style="font-size:12px;color:#aaa;">(d%: ${rBase}${bonusTxt})</span>`);
+            } 
+            else if (text.includes("equipamento")) {
+                let d6_1 = rolarD6();
+                let sub1 = d6_1 <= 3 ? "Armas" : (d6_1 <= 5 ? "Armaduras" : "Esotericos");
+                let rBase1 = rolarD100();
+                let r1 = hasBonus ? Math.min(100, rBase1 + 20) : rBase1;
+                let item1 = `Equipamento (${sub1}):${formataItem(buscarItem(bd.equipamentos[sub1], r1))} <span style="font-size:12px;color:#aaa;">(1d6: ${d6_1} | d%: ${rBase1}${bonusTxt})</span>`;
 
-            // Botões de Acessório (não possui item base)
-            if (categoria === "Acessorios") {
-                let nivel = "Menor";
-                if (text.includes("médio") || text.includes("medio")) nivel = "Medio";
-                if (text.includes("maior")) nivel = "Maior";
-                
-                botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
-                    <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('acess_${idUnico}', 'acessorio_${nivel}')">🎲 Rolar Acessório</button>
-                    <div id="acess_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
-                </div>`;
-            } else {
-                // Botões de Base Mundana + Encantos/Melhorias
-                botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
-                    <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #555; flex-shrink: 0;" onclick="rolarSubItem('base_${idUnico}', 'base_${categoria}')">🎲 Rolar Base</button>
-                    <div id="base_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
-                </div>`;
+                if (is2D) {
+                    let idUnicoEq = Math.random().toString(36).substr(2, 9);
+                    let d6_2 = rolarD6();
+                    let sub2 = d6_2 <= 3 ? "Armas" : (d6_2 <= 5 ? "Armaduras" : "Esotericos");
+                    let rBase2 = rolarD100();
+                    let r2 = hasBonus ? Math.min(100, rBase2 + 20) : rBase2;
+                    let item2 = `Equipamento (${sub2}):${formataItem(buscarItem(bd.equipamentos[sub2], r2))} <span style="font-size:12px;color:#aaa;">(1d6: ${d6_2} | d%: ${rBase2}${bonusTxt})</span>`;
+                    
+                    let nomeCat1 = sub1 === "Esotericos" ? "Esotérico" : sub1.slice(0, -1);
+                    let nomeCat2 = sub2 === "Esotericos" ? "Esotérico" : sub2.slice(0, -1);
 
-                let tabelaExtra = isMagico ? "magicos" : "superiores";
-                for (let i = 1; i <= numRols; i++) {
-                    botoesHTML += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
-                        <button style="width: 120px; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('extra_${i}_${idUnico}', '${tabelaExtra}_${categoria}')">🎲 ${isMagico ? 'Encanto' : 'Melhoria'} ${i}</button>
-                        <div id="extra_${i}_${idUnico}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
-                    </div>`;
+                    resultadosHtml.push(`
+                    <div id="box_2d_${idUnicoEq}" style="background: rgba(255, 235, 59, 0.05); padding: 12px; border-radius: 8px; border: 1px dashed #ffeb3b; margin-top: 5px;">
+                        <div id="titulo_2d_${idUnicoEq}" style="color: #ffeb3b; font-size: 13px; font-weight: bold; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            <span>⚖️ Regra 2D: Escolha a categoria sorteada para revelar o item</span>
+                        </div>
+                        <div id="botoes_escolha_${idUnicoEq}" style="display: flex; gap: 10px; margin-bottom: 5px;">
+                            <button style="flex: 1; padding: 8px; font-size: 13px; background: #4db8ff; border:none; border-radius:4px; color: #111; font-weight: bold; cursor: pointer;" onclick="escolher2D('${idUnicoEq}', 'optA_${idUnicoEq}')">Opção A: ${nomeCat1} (1d6 =${d6_1})</button>
+                            <button style="flex: 1; padding: 8px; font-size: 13px; background: #f44336; border:none; border-radius:4px; color: #fff; font-weight: bold; cursor: pointer;" onclick="escolher2D('${idUnicoEq}', 'optB_${idUnicoEq}')">Opção B: ${nomeCat2} (1d6 =${d6_2})</button>
+                        </div>
+                        <div id="optA_${idUnicoEq}" style="display:none;">▶ <span style="color:#4db8ff; font-weight:bold;">Opção A Escolhida:</span> ${item1}</div>
+                        <div id="optB_${idUnicoEq}" style="display:none;">▶ <span style="color:#f44336; font-weight:bold;">Opção B Escolhida:</span> ${item2}</div>
+                    </div>`);
+                } else {
+                    resultadosHtml.push(item1);
                 }
+            } 
+            else if (text.includes("superior") || text.includes("mágico")) {
+                let idUnico = Math.random().toString(36).substr(2, 9);
+                let isMagico = text.includes("mágico");
+                
+                let numRols = 1;
+                if (isMagico) {
+                    if (text.includes("menor")) numRols = 1;
+                    else if (text.includes("médio") || text.includes("medio")) numRols = 2;
+                    else if (text.includes("maior")) numRols = 3;
+                } else {
+                    let matchMelhoria = text.match(/\d+/);
+                    numRols = matchMelhoria ? parseInt(matchMelhoria[0]) : 1;
+                }
+
+                const obterCategoria = (d6) => {
+                    if (isMagico) {
+                        if (d6 <= 2) return "Armas";
+                        if (d6 === 3) return "Armaduras";
+                        if (d6 === 4) return "Esotericos";
+                        return "Acessorios";
+                    } else {
+                        if (d6 <= 3) return "Armas";
+                        if (d6 <= 5) return "Armaduras";
+                        return "Esotericos";
+                    }
+                };
+
+                const gerarBotoes = (categoria, idBase) => {
+                    let html = "";
+                    if (categoria === "Acessorios") {
+                        let nivel = "Menor";
+                        if (text.includes("médio") || text.includes("medio")) nivel = "Medio";
+                        if (text.includes("maior")) nivel = "Maior";
+                        
+                        html += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                            <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('acess_${idBase}', 'acessorio_${nivel}')">🎲 Rolar Acessório</button>
+                            <div id="acess_${idBase}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                        </div>`;
+                    } else {
+                        html += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                            <button style="width: auto; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #555; flex-shrink: 0;" onclick="rolarSubItem('base_${idBase}', 'base_${categoria}')">🎲 Rolar Base</button>
+                            <div id="base_${idBase}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                        </div>`;
+
+                        let tabelaExtra = isMagico ? "magicos" : "superiores";
+                        for (let j = 1; j <= numRols; j++) {
+                            html += `<div style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                <button style="width: 120px; padding: 4px 8px; font-size: 12px; margin-right: 10px; background: #7b1fa2; flex-shrink: 0;" onclick="rolarSubItem('extra_${j}_${idBase}', '${tabelaExtra}_${categoria}')">🎲 ${isMagico ? 'Encanto' : 'Melhoria'} ${j}</button>
+                                <div id="extra_${j}_${idBase}" style="font-size: 14px; line-height: 1.5; color: #ddd;">...</div>
+                            </div>`;
+                        }
+                    }
+                    return html;
+                };
+
+                let botoesHTML = `<div style="margin-top: 10px; padding-left: 10px; border-left: 2px solid #555;">`;
+                
+                let d6Cat1 = rolarD6();
+                let cat1 = obterCategoria(d6Cat1);
+                let displayCat1 = cat1 === "Acessorios" ? "Acessório" : (cat1 === "Esotericos" ? "Esotérico" : cat1.slice(0, -1));
+
+                if (is2D) {
+                    let d6Cat2 = rolarD6();
+                    let cat2 = obterCategoria(d6Cat2);
+                    let displayCat2 = cat2 === "Acessorios" ? "Acessório" : (cat2 === "Esotericos" ? "Esotérico" : cat2.slice(0, -1));
+
+                    botoesHTML += `
+                    <div id="box_2d_${idUnico}" style="background: rgba(255, 235, 59, 0.05); padding: 12px; border-radius: 8px; border: 1px dashed #ffeb3b; margin-top: 5px;">
+                        <div id="titulo_2d_${idUnico}" style="color: #ffeb3b; font-size: 13px; font-weight: bold; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            <span>⚖️ Regra 2D: Escolha UMA das categorias para revelar as rolagens</span>
+                        </div>
+                        <div id="botoes_escolha_${idUnico}" style="display: flex; gap: 10px; margin-bottom: 5px;">
+                            <button style="flex: 1; padding: 8px; font-size: 13px; background: #4db8ff; border:none; border-radius:4px; color: #111; font-weight: bold; cursor: pointer;" onclick="escolher2D('${idUnico}', 'optA_${idUnico}')">Opção A: ${displayCat1} (1d6 =${d6Cat1})</button>
+                            <button style="flex: 1; padding: 8px; font-size: 13px; background: #f44336; border:none; border-radius:4px; color: #fff; font-weight: bold; cursor: pointer;" onclick="escolher2D('${idUnico}', 'optB_${idUnico}')">Opção B: ${displayCat2} (1d6 =${d6Cat2})</button>
+                        </div>
+                        <div id="optA_${idUnico}" style="display:none;">
+                            <span style="color: #4db8ff; font-weight: bold; font-size: 13px; margin-bottom: 6px; display: block;">▶ OPÇÃO A ESCOLHIDA: ${displayCat1}</span>${gerarBotoes(cat1, idUnico + "_A")}
+                        </div>
+                        <div id="optB_${idUnico}" style="display:none;">
+                            <span style="color: #f44336; font-weight: bold; font-size: 13px; margin-bottom: 6px; display: block;">▶ OPÇÃO B ESCOLHIDA: ${displayCat2}</span>${gerarBotoes(cat2, idUnico + "_B")}
+                        </div>
+                    </div>`;
+                } else {
+                    botoesHTML += `<div style="margin-bottom: 8px; color: #aaa; font-size: 13px;">Categoria sorteada (1d6 = ${d6Cat1}): <strong>${displayCat1}</strong></div>`;
+                    botoesHTML += gerarBotoes(cat1, idUnico);
+                }
+                
+                botoesHTML += `</div>`;
+                resultadosHtml.push(botoesHTML);
             }
-            botoesHTML += `</div>`;
-            return `<strong style="color: #ff9800;">${tipoBase}</strong> ${botoesHTML}`;
         }
-        return `<strong>${tipoBase}</strong>`; 
-    } 
+        
+        let headerQtd = qtd > 1 ? ` <span style="font-size:12px;color:#aaa;">(Sorteados ${qtd} itens)</span>` : "";
+        let blocosUnidos = resultadosHtml.join('<div style="margin: 12px 0; border-bottom: 1px dashed rgba(255,255,255,0.1);"></div>');
+        
+        return `<strong style="color: #ff9800; font-size: 16px;">${tipoBase}</strong>${headerQtd}<div style="margin-top: 10px;">${blocosUnidos}</div>`;
+    }
 
     window.rolarSubItem = function(idAlvo, tipo) {
         let r = rolarD100();
@@ -201,7 +303,7 @@ let bd = {};
             let d6 = rolarD6();
             let sub = d6 <= 3 ? "Armas" : (d6 <= 5 ? "Armaduras" : "Esotericos");
             let item = buscarItem(bd.equipamentos[sub], r);
-            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(${sub} | 1d6: ${d6} | d%: ${r})</span>`;
+            alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(${sub} | 1d6: ${d6} \vert{} d\%:${r})</span>`;
             
         } else if (tipo.startsWith('base_')) {
             let sub = tipo.split('_')[1];
@@ -216,36 +318,28 @@ let bd = {};
         } else if (tipo.startsWith('superiores_')) {
             let sub = tipo.split('_')[1];
             let item = buscarItem(bd.superiores[sub], r);
-            
             let htmlAdicional = "";
             
-            // Intercepta o material especial e rola 1d6 automaticamente
             if (item.nome.toLowerCase().includes("material especial")) {
                 let d6Mat = rolarD6();
                 let materiais = ["Aço-rubi", "Adamante", "Gelo eterno", "Madeira Tollon", "Matéria vermelha", "Mitral"];
                 htmlAdicional = `<br><span style="color: #ff9800; font-size: 13px; margin-top: 2px; display: inline-block;">↳ Material: <strong>${materiais[d6Mat-1]}</strong> <span style="color:#aaa; font-size: 11px;">(1d6: ${d6Mat})</span></span>`;
             }
-            
             alvo.innerHTML = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>${htmlAdicional}`;
             
         } else if (tipo.startsWith('magicos_')) {
             let sub = tipo.split('_')[1];
             let item = buscarItem(bd.magicos[sub], r);
-            
             let htmlFinal = `${formataItem(item)} <span style="font-size:12px;color:#aaa;">(d%: ${r})</span>`;
             
-            // Tratamento especial para 91-100 (Item Específico)
             if (item.nome.toLowerCase().includes("específic") || item.nome.toLowerCase().includes("especific")) {
                 let rEsp = rolarD100();
-                let itemEsp = buscarItem(bd.magicos[sub + "_Esp"], rEsp); // Puxa a tabela secreta do JSON
-                
+                let itemEsp = buscarItem(bd.magicos[sub + "_Esp"], rEsp);
                 htmlFinal = `<del style="color:#666;">${item.nome}</del> 🌟 <strong>${itemEsp.nome}</strong> <span style="font-size:12px;color:#aaa;">(Substitui a Base! d%: ${rEsp})</span>`;
-                
                 if (itemEsp.livro && itemEsp.livro !== "nan") {
                     htmlFinal += ` <span style="font-size:11px;color:#aaa;font-style:italic;">[${itemEsp.livro} p.${String(itemEsp.pagina).replace('.0', '')}]</span>`;
                 }
             }
-            
             alvo.innerHTML = htmlFinal;
         }
     }
@@ -268,7 +362,7 @@ let bd = {};
         setTimeout(() => botao.innerText = 'Copiar', 2000);
     }
 
-function gerarTesouro() {
+    function gerarTesouro() {
         if (!bd.tesouro_nd) return;
         const nd = document.getElementById("nd-select").value;
         
@@ -290,8 +384,6 @@ function gerarTesouro() {
             if (querItens && checa(l.chance_itens, dItens)) txtI = l.itens;
         }
 
-        // --- PADRONIZAÇÃO AQUI ---
-        // Pega qualquer variação de traço do livro e converte para "Nenhum"
         if (txtD === "—" || txtD === "–" || txtD === "-" || txtD.trim() === "") txtD = "Nenhum";
         if (txtI === "—" || txtI === "–" || txtI === "-" || txtI.trim() === "") txtI = "Nenhum";
 
@@ -301,6 +393,7 @@ function gerarTesouro() {
         }
         
         let dinhResolvido = querDinh ? txtD : "Não rolado";
+        let txtDinhCopia = txtD; 
         
         if (querDinh && txtD !== "Nenhum") {
             let txtDLower = txtD.toLowerCase();
@@ -316,6 +409,8 @@ function gerarTesouro() {
                     qtd = fixo;
                     for(let i=0; i < dados; i++) qtd += Math.floor(Math.random() * faces) + 1;
                 }
+
+                txtDinhCopia = `${txtD} (Sorteados${qtd} itens)`; 
 
                 let isRiqueza = txtDLower.includes("riqueza");
                 let hasBonus = txtDLower.includes("+%"); 
@@ -375,6 +470,33 @@ function gerarTesouro() {
                 }
                 htmlAcumulado += `</div>`;
                 dinhResolvido = `<strong>${txtD}</strong> ${htmlAcumulado}`;
+                
+            } else {
+                let matchMoeda = txtD.match(/(\d+)d(\d+)[xX]([\d.]+)\s*([a-zA-Z\$]+)/);
+                
+                if (matchMoeda) {
+                    let qtdDados = parseInt(matchMoeda[1]);
+                    let faces = parseInt(matchMoeda[2]);
+                    let multiplicador = parseInt(matchMoeda[3].replace(/\./g, '')); 
+                    let moeda = matchMoeda[4].toUpperCase(); 
+
+                    let soma = 0;
+                    let rolagens = [];
+                    for(let i=0; i < qtdDados; i++) {
+                        let resDado = Math.floor(Math.random() * faces) + 1;
+                        soma += resDado;
+                        rolagens.push(resDado);
+                    }
+                    let total = soma * multiplicador;
+                    
+                    txtDinhCopia = `${total.toLocaleString('pt-BR')} ${moeda}`;
+
+                    dinhResolvido = `<strong>${txtD}</strong>
+                    <div style="margin-top: 6px; padding-left: 10px; border-left: 2px solid #fbc02d;">
+                        <span style="color: #fbc02d; font-size: 15px;">↳ Total: <strong>${txtDinhCopia}</strong></span> 
+                        <span style="font-size:12px; color:#aaa; font-style:italic; margin-left: 6px;">(Dados: [${rolagens.join(', ')}] = ${soma} &times; ${multiplicador})</span>
+                    </div>`;
+                }
             }
         }
 
@@ -390,10 +512,9 @@ function gerarTesouro() {
         res.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                 <span style="font-size: 16px;">ND: <strong>${nd}</strong></span>
-                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;" onclick="copiarCard(this, '${nd}', '${querDinh ? txtD : "Não rolado"}')">Copiar</button>
+                <button style="width: auto; padding: 6px 12px; margin: 0; background-color: #555; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;" onclick="copiarCard(this, '${nd}', '${querDinh ? txtDinhCopia : "Não rolado"}')">Copiar</button>
             </div>
             
-            <!-- ABA DE DINHEIRO -->
             <details ${abaDinhAberta} style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; margin-bottom: 6px; border-left: 3px solid #fbc02d; opacity: ${querDinh ? '1' : '0.4'};">
                 <summary style="cursor: pointer; font-weight: bold; outline: none; list-style: none; display: flex; align-items: center; gap: 8px;">
                     <span style="font-size: 16px;">💰 Dinheiro</span> 
@@ -404,7 +525,6 @@ function gerarTesouro() {
                 </div>
             </details>
 
-            <!-- ABA DE ITENS -->
             <details ${abaItensAberta} style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; border-left: 3px solid #ff4d4d; opacity: ${querItens ? '1' : '0.4'};">
                 <summary style="cursor: pointer; font-weight: bold; outline: none; list-style: none; display: flex; align-items: center; gap: 8px;">
                     <span style="font-size: 16px;">⚔️ Itens</span> 
@@ -418,7 +538,7 @@ function gerarTesouro() {
         document.getElementById("historico").prepend(res);
     }
 
-function rolarEspacoRiqueza() {
+    function rolarEspacoRiqueza() {
         let r = Math.floor(Math.random() * 20) + 1;
         let esp, desc;
         if (r <= 4) { esp = "0,5"; desc = "Anel, brincos ou gema"; }
@@ -446,8 +566,8 @@ function rolarEspacoRiqueza() {
         </summary>
         <div style="padding: 10px 14px; border-top: 1px solid #444; font-size: 12px; color: #ccc; line-height: 1.5;">
             <p style="margin: 0 0 8px 0; color: #aaa; font-style: italic;">Se rolar uma melhoria que não se aplique ao item em questão (ex: melhoria exclusiva de escudos para armadura), role novamente.</p>
-            <p style="margin: 0 0 6px 0;"><br> *Conta como duas melhorias e inclui a melhoria de pré-requisito. Se o item só possuir uma, role novamente.</p>
-            <p style="margin: 0;">** Material Especial:<br> Role 1d6 para definir o material:<br> 1) aço-rubi, 2) adamante, 3) gelo eterno, 4) madeira Tollon, 5) matéria vermelha, 6) mitral.</p>
+            <p style="margin: 0 0 6px 0;"><strong>⚔️ Armas & Armaduras (*):</strong><br> *Conta como duas melhorias e inclui a melhoria de pré-requisito. Se o item só possuir uma, role novamente.</p>
+            <p style="margin: 0;"><strong>** Material Especial:</strong><br> Role 1d6 para definir o material:<br> 1) aço-rubi, 2) adamante, 3) gelo eterno, 4) madeira Tollon, 5) matéria vermelha, 6) mitral.</p>
         </div>
     </details>
 
